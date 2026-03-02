@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, X } from "lucide-react";
+import { X } from "lucide-react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 interface ProjectOnePagerProps {
@@ -104,8 +104,7 @@ export default function ProjectOnePager({
                 className="rounded-full text-base"
                 onClick={scrollToContact}
               >
-                <Calendar className="mr-2 w-5 h-5" />
-                Book a Call
+                Get in Touch
               </Button>
             </div>
           </div>

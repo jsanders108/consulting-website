@@ -9,7 +9,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Contact() {
@@ -57,23 +57,15 @@ export default function Contact() {
           {/* CTA Card */}
           <Card className="border border-border/60 shadow-sm">
             <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                <Button size="lg" className="rounded-full text-base w-full sm:w-auto">
-                  <Calendar className="mr-2 w-5 h-5" />
-                  Book a 30-Minute Call
-                </Button>
-                {/* TODO: Replace href with your Calendly or scheduling link */}
-              </div>
-
-              <p className="text-muted-foreground mb-6 font-accent">Or reach out directly:</p>
+              <p className="text-muted-foreground mb-6 font-accent">Reach out directly:</p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <a
-                  href="mailto:jsanders108@hotmail.com"
+                  href="mailto:jason.sanders.ai@gmail.com"
                   className="flex items-center gap-2 text-foreground hover:text-primary transition-colors group"
                 >
                   <Mail className="w-5 h-5" />
-                  <span className="text-sm font-accent">jsanders108@hotmail.com</span>
+                  <span className="text-sm font-accent">jason.sanders.ai@gmail.com</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/jason-sanders-9723ba13/"

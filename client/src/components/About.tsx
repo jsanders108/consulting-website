@@ -38,7 +38,7 @@ export default function About() {
     <section id="about" className="py-24 md:py-32 bg-background">
       <div className="container" ref={sectionRef}>
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 reveal">
+        <div className="max-w-3xl mx-auto mb-16 reveal">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-[2px] bg-primary" />
             <p className="text-sm font-accent font-semibold text-primary tracking-widest uppercase">
@@ -51,7 +51,7 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="max-w-3xl space-y-6 mb-20 reveal">
+        <div className="max-w-3xl mx-auto space-y-6 mb-20 reveal">
           <p className="text-lg text-foreground leading-relaxed">
             I've spent two decades at the intersection of market research and marketing strategy. For eight years at Driscoll's, I led research and analytics within the marketing organization — building global brand health tracking systems across five continents, running creative optimization studies, validating new product launches with mixed-method research, and translating consumer sentiment into marketing narratives that drove brand growth.
           </p>

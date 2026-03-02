@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Right - Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="mailto:jsanders108@hotmail.com"
+              href="mailto:jason.sanders.ai@gmail.com"
               className="w-10 h-10 rounded-full bg-muted hover:bg-primary/10 flex items-center justify-center transition-colors group"
               aria-label="Email"
             >

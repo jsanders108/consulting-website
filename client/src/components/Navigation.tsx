@@ -75,7 +75,7 @@ export default function Navigation() {
               onClick={() => scrollToSection("#contact")}
               className="rounded-full"
             >
-              Book a Call
+              Contact
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ export default function Navigation() {
               onClick={() => scrollToSection("#contact")}
               className="w-full rounded-full mt-2"
             >
-              Book a Call
+              Contact
             </Button>
           </div>
         </div>

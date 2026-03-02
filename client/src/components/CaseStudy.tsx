@@ -51,7 +51,7 @@ export default function CaseStudy() {
 
       <div className="container relative z-10" ref={sectionRef}>
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 reveal">
+        <div className="max-w-3xl mx-auto mb-12 reveal">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-[2px] bg-primary" />
             <p className="text-sm font-accent font-semibold text-primary tracking-widest uppercase">
@@ -67,7 +67,7 @@ export default function CaseStudy() {
         </div>
 
         {/* Case Study Narrative */}
-        <div className="max-w-3xl reveal">
+        <div className="max-w-3xl mx-auto reveal">
           <Card className="border border-border/60 shadow-sm">
             <CardContent className="p-8 md:p-10 space-y-4">
               <p className="text-lg text-foreground leading-relaxed">

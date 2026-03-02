@@ -9,7 +9,7 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/hero-bg-e4uQ2LrGfEsgXtSyKj6b9Z.webp";
 
@@ -71,8 +71,7 @@ export default function Hero() {
               onClick={() => scrollToSection("#contact")}
               className="rounded-full text-base bg-background/50 backdrop-blur-sm"
             >
-              <Calendar className="mr-2 w-5 h-5" />
-              Book a Call
+              Get in Touch
             </Button>
           </div>
         </div>

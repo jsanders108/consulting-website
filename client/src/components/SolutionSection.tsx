@@ -70,7 +70,7 @@ export default function SolutionSection({
     <section id={id} className={`py-24 md:py-32 ${className}`}>
       <div className="container" ref={sectionRef}>
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 reveal">
+        <div className="max-w-3xl mx-auto mb-12 reveal">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-[2px] bg-primary" />
             <p className="text-sm font-accent font-semibold text-primary tracking-widest uppercase">
@@ -87,7 +87,7 @@ export default function SolutionSection({
 
         {/* One-Pager Card + Video Placeholder — unified pair */}
         {(onePagerThumbnail || onOnePagerClick) && (
-          <div className="max-w-4xl mb-16 reveal">
+          <div className="max-w-4xl mx-auto mb-16 reveal">
             <div className="grid md:grid-cols-2 gap-4">
               {/* Top/Left: One-Pager Card */}
               <button
@@ -147,7 +147,7 @@ export default function SolutionSection({
 
         {/* Fallback: Original video-only placeholder for sections without one-pagers */}
         {!onePagerThumbnail && !onOnePagerClick && (
-          <div className="max-w-4xl mb-16 reveal">
+          <div className="max-w-4xl mx-auto mb-16 reveal">
             <Card className="overflow-hidden border-2 border-border/60 shadow-sm hover:shadow-md transition-shadow duration-300">
               <AspectRatio ratio={16 / 9}>
                 <div className="w-full h-full bg-muted/40 flex flex-col items-center justify-center gap-4">
@@ -164,7 +164,7 @@ export default function SolutionSection({
         )}
 
         {/* Capabilities Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {capabilities.map((cap, index) => (
             <div
               key={index}
