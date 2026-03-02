@@ -30,7 +30,7 @@ export default function FocusGroupOnePager({
       onOpenChange={onOpenChange}
       headline="From Transcripts to Verified Executive Reports — Without the Manual Grind"
       badge="Capability Demo — Synthetic Data"
-      intro="Focus group analysis is still mostly manual — weeks of transcripts, quotes, and reports that might not survive a client's fact-check. I built a system that takes raw transcripts and produces verified executive deliverables in a single run. Here's how it works."
+      intro="Focus group analysis is one of the most labor-intensive stages in qualitative research — days or weeks of reading transcripts, tagging themes, pulling quotes, comparing groups, and writing reports. I built a system that takes raw transcripts and does all of that, including producing verified executive deliverables, in a single run. Here's how it works."
       ctaText="If your team is spending days on work like this, I'd be happy to walk you through the system and discuss how it could fit your workflow."
     >
       {/* The Challenge */}
@@ -40,10 +40,14 @@ export default function FocusGroupOnePager({
           the real work begins — analysts spend days reading transcripts line by
           line, tagging themes, pulling quotes, and building a synthesis across
           sessions. Then someone has to write the report. Then someone else has to
-          build the deck. And throughout all of it, there's a constant risk: a
-          misattributed quote, a finding that overstates consensus, a claim that
-          doesn't hold up when the client checks the transcript. The manual
-          process is slow, expensive, and error-prone — and it doesn't scale.
+          build the deck. It's skilled, painstaking work, and it doesn't scale. A
+          two-group project might take days; a ten-group study can take weeks. And
+          throughout all of it, rigor matters — a misattributed quote, a finding
+          that overstates consensus, or a claim that doesn't hold up when the
+          client checks the transcript can undermine the entire deliverable. The
+          system compresses that timeline from days or weeks into a single run,
+          while building in the kind of verification that protects your
+          credibility with clients.
         </p>
       </OnePagerSection>
 

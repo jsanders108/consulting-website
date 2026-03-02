@@ -31,7 +31,7 @@ export default function SurveyAnalysisOnePager({
       onOpenChange={onOpenChange}
       headline="From Raw Survey Data to Verified Reports — Without the Manual Analysis"
       badge="Capability Demo — Synthetic Data"
-      intro="Survey analysis follows the same pattern every time — export the data, build the tabs, write the report, build the deck. Most of that work is mechanical, but it still takes days. I built a system that takes a raw survey file and produces a verified analytical report and executive briefing in a single run."
+      intro="Survey analysis follows the same pattern every time — export the data, build the tabs, write the report, build the deck. Much of that work is mechanical — cleaning, tabulating, formatting — but the analysis and interpretation that make a report valuable require real skill. Together, it takes days. I built a system that handles both, taking a raw survey file and producing a verified analytical report and executive briefing in a single run."
       ctaText="If your team is spending days turning survey data into reports, I'd be happy to walk you through the system and discuss how it could fit your workflow."
     >
       {/* The Challenge */}
@@ -43,10 +43,14 @@ export default function SurveyAnalysisOnePager({
           percentage in a client deliverable undermines the whole project. Then
           someone builds a presentation from the report — reformatting the same
           findings into slides. The whole process takes days of skilled analyst
-          time, and the hardest part isn't the analysis itself. It's the
-          verification. Making sure that every statistic in every table in every
-          section of the report actually matches what's in the data. That's where
-          errors creep in, and that's where the real time goes.
+          time. The tabulation and verification are essential — one wrong
+          percentage in a client deliverable undermines the whole project — but
+          the real challenge is the analysis itself. You're working through
+          hundreds of charts and tables to build a deliverable that doesn't just
+          summarize results but provides actionable recommendations. That's the
+          work that demands the most from an analyst, and it's where this
+          system's ability to identify patterns and synthesize findings is most
+          valuable.
         </p>
       </OnePagerSection>
 
@@ -138,10 +142,9 @@ export default function SurveyAnalysisOnePager({
 
       {/* Data Note */}
       <OnePagerNote>
-        This demo uses synthetic survey data — a fictional study on
-        cryptocurrency attitudes — specifically created to showcase the system's
-        capabilities. No real client data is used or exposed in any project
-        materials.
+        This demo uses data from a real survey on cryptocurrency attitudes
+        fielded through QuestionPro, with a sample of 175 respondents. No
+        client data is used or exposed in any project materials.
       </OnePagerNote>
     </ProjectOnePager>
   );
