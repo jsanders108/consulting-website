@@ -3,7 +3,6 @@
  * Condensed case study with NDA note
  *
  * DESIGN: The Studio — Warm White & Copper
- * Uses the geometric accent image as a decorative element
  * Card with warm border, editorial typography
  */
 
@@ -11,7 +10,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useRef } from "react";
 
-const ACCENT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/case-study-accent-3HSyuUoNLuz2mmert5wWBH.webp";
 
 export default function CaseStudy() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -38,18 +36,8 @@ export default function CaseStudy() {
   }, []);
 
   return (
-    <section id="case-study" className="py-24 md:py-32 bg-muted/30 relative overflow-hidden">
-      {/* Decorative accent image */}
-      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 opacity-10 pointer-events-none">
-        <img
-          src={ACCENT_IMG}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-
-      <div className="container relative z-10" ref={sectionRef}>
+    <section id="case-study" className="py-24 md:py-32 bg-muted/30">
+      <div className="container" ref={sectionRef}>
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-12 reveal">
           <div className="flex items-center gap-3 mb-4">

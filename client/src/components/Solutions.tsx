@@ -3,11 +3,9 @@
  * Three solution sections using the reusable SolutionSection component
  * 1. Focus Group / Transcript Analysis — with one-pager modal
  * 2. Survey Analysis & Reporting — with one-pager modal
- * 3. Brand & Marketing Analytics — video placeholder only (no one-pager yet)
+ * 3. Brand & Marketing Analytics — capabilities only (no one-pager yet)
  *
  * DESIGN: The Studio — Warm White & Copper
- * Solutions 1 & 2 have clickable one-pager cards + video placeholders
- * Solution 3 retains the original video-only placeholder
  */
 
 import { useState } from "react";
@@ -46,7 +44,6 @@ export default function Solutions() {
         eyebrow="Solution 1"
         title="Focus Group & Transcript Analysis"
         description="Turn hours of recorded discussions into structured, quote-verified reports — in minutes, not days. Built for firms that run qualitative research at scale and need to maintain rigor without the bottleneck."
-        videoPlaceholderText="Demo video coming soon — Loom walkthrough of the transcript analysis pipeline"
         className="bg-background"
         onePagerThumbnail={THUMB_FOCUS_GROUP}
         onePagerLabel="Focus Group & Transcript Analysis"
@@ -80,7 +77,6 @@ export default function Solutions() {
         eyebrow="Solution 2"
         title="Survey Analysis & Automated Reporting"
         description="Feed in raw survey data, get back a stakeholder-ready narrative report with every statistic independently verified. Adapts its methodology dynamically to any question structure — no pre-scripted logic required."
-        videoPlaceholderText="Demo video coming soon — Loom walkthrough of the survey analysis system"
         className="bg-muted/30"
         onePagerThumbnail={THUMB_SURVEY}
         onePagerLabel="Survey Analysis & Automated Reporting"
@@ -114,7 +110,6 @@ export default function Solutions() {
         eyebrow="Solution 3"
         title="Brand & Marketing Analytics"
         description="The same AI architecture applied to the problems marketing teams face every day — tracking brand health, understanding campaign effectiveness, synthesizing competitive intelligence, and turning customer feedback into strategic direction."
-        videoPlaceholderText="Currently in development — contact me to discuss your specific use case"
         className="bg-background"
         capabilities={[
           {
