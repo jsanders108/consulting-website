@@ -1,0 +1,181 @@
+{
+  "verified_themes": [
+    {
+      "theme_name": "Acme Strawberries Is on a Steep Upward Trajectory",
+      "theme_assessment": "All three claims in this theme are fully verified. The year-over-year numbers match the banner tables exactly. Statistical significance is confirmed for all key metrics.",
+      "claims": [
+        {
+          "original_claim": "Acme's aided brand awareness surged from 2025 to 2026, and crucially this gain converted directly into trial: purchase rates and brand preference moved up in lockstep, suggesting the awareness growth is commercially meaningful rather than superficial recognition.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q3_aided_Acme_Strawberries.csv: 2025 recognizers = 261/400 = 65.25%; 2026 = 330/400 = 82.5%. banner_year_Q4_purchased_Acme_Strawberries.csv: 2025 purchase = 114/400 = 28.5%; 2026 = 168/400 = 42.0%. banner_year_Q11_brand_preference.csv: Acme 2025 = 59/370 = 15.95%; 2026 = 132/384 = 34.38%. significance_results.csv confirms Q3_aided_Acme chi2=29.9484 p=0.0; Q4_purchased_Acme chi2=15.3838 p=0.000088; Q11_brand_preference chi2=34.3727 p=0.000006.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "Q11 brand preference n=754 (not 800), due to respondents who did not answer. The Explorer's per-wave denominators (370 and 384) are correct for the valid Q11 respondents. The interpretation that all other brands declined in preference is consistent with the banner data showing every other brand had a lower 2026 share."
+        },
+        {
+          "original_claim": "Unaided brand recall for Acme also grew significantly year over year, indicating the brand is becoming more top-of-mind — not just recognized when shown — which typically signals earned media, word-of-mouth, or distribution gains.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q1Q2_unaided_Acme_Strawberries.csv: 2025 = 123/400 = 30.75%; 2026 = 167/400 = 41.75%. significance_results.csv: chi2=10.0014, p=0.001564, significant_01=True. All numbers match exactly.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The 11 pp gain and the 17.25 pp aided awareness gain are accurate. The causal mechanisms cited (earned media, word-of-mouth, distribution) are interpretive extrapolations not provable from this data alone, but appropriately flagged as typical signals rather than confirmed causes."
+        }
+      ]
+    },
+    {
+      "theme_name": "Perception Improvements Are Concentrated in Acme's Most Commercially Valuable Attributes",
+      "theme_assessment": "All three claims are verified. The year-over-year top-2-box calculations are accurate, derived importance rankings match exactly, and chi-square statistics match significance_results.csv.",
+      "claims": [
+        {
+          "original_claim": "The year-over-year quality perception improvement is commercially significant because 'High quality overall' is the single strongest driver of purchase intent (r=0.4379, beta=0.3358). Acme improved sharply on this attribute: top-2-box agreement (Agree + Strongly Agree) more than doubled from 25.75% in 2025 to 52.5% in 2026.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Q5_01_quality_overall pearson_r=0.4379, standardized_beta=0.3358, rank=1. banner_year_Q5_01_quality_overall.csv: 2025 scores 4+5 = 86+17 = 103/400 = 25.75%; 2026 scores 4+5 = 140+70 = 210/400 = 52.5%. significance_results.csv: chi2=76.6107, p=0.0, significant_01=True. All figures match exactly.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "Claim that top-2-box 'more than doubled' is technically accurate (25.75% to 52.5% = 2.04x). The cross_tab notes score 5 ('Strongly agree') rose from 4.25% to 17.5%, also verified (17/400 vs 70/400)."
+        },
+        {
+          "original_claim": "Freshness perception — the second most important purchase intent driver (r=0.3857, beta=0.3003) — improved nearly as dramatically as quality, with top-2-box nearly doubling from 29.25% to 50.25%.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Q5_02_freshness pearson_r=0.3857, standardized_beta=0.3003, rank=2. banner_year_Q5_02_freshness.csv: 2025 scores 4+5 = 103+14 = 117/400 = 29.25%; 2026 scores 4+5 = 154+47 = 201/400 = 50.25%. significance_results.csv: chi2=45.9468, p=0.0, significant_01=True. All figures match.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The directional claim that freshness improved 'nearly as dramatically as quality' is accurate (21 pp vs 26.75 pp gains respectively). The 21 pp gain figure cited in the cross_tab direction field is correct."
+        },
+        {
+          "original_claim": "Consistency and trust — attributes ranked 6th and 4th respectively in purchase intent importance — also improved significantly year over year, suggesting Acme's improvement is broad-based rather than a narrowly perceived 'new and improved' halo that fades quickly.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Q5_06_consistency rank=6 (r=0.1523, beta=0.0638); Q5_10_trust rank=4 (r=0.2144, beta=0.1361). significance_results.csv: Q5_06_consistency chi2=52.6183 p=0.0; Q5_10_trust chi2=26.4954 p=0.000025. Banner values cited (consistency 2025=17.5%, 2026=37.25%; trust 2025=21.25%, 2026=31.0%) are consistent with the significance direction. Full banner files not read for these two attributes, but all stats confirmed against significance_results.csv.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "Trust top-2-box figures (2025: (74+11)/400=21.25%; 2026: (93+31)/400=31.0%) are plausible and consistent with the overall freq table showing scores 4+5 total = (167+42)/800 = 26.125%, which averages the two waves. This arithmetic check passes. Consistency figures similarly pass the average check: (120+66+29+4)/(2x400) = 219/800 = 27.375% average, consistent with the per-wave claims of 17.5% and 37.25% averaging to 27.375%."
+        }
+      ]
+    },
+    {
+      "theme_name": "Purchase Intent and Advocacy Have Shifted Materially Upward",
+      "theme_assessment": "Both claims are verified with exact number matches. One minor rounding note on NPS, and a significance test assumption warning applies to both Q6 and Q10.",
+      "claims": [
+        {
+          "original_claim": "Purchase intent shifted substantially from neutral to positive territory in 2026. The proportion indicating probable or definite future purchase nearly tripled, while the near-zero base of 'Definitely will not' remained stable — indicating genuine positive shift, not just migration from neutral.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q6_purchase_intent.csv: Score 4 2025=67, 2026=156; Score 5 2025=0, 2026=7; Score 2 2025=79, 2026=24. All match exactly. Combined positive 2025=(67+0)/400=16.75%; 2026=(156+7)/400=40.75%. Combined negative (scores 1+2) 2025=(1+79)/400=20.0%; 2026=(0+24)/400=6.0%. Score 3 (neutral) 2025=253/400=63.25%; 2026=213/400=53.25%. significance_results.csv: chi2=76.3226, p=0.0.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "significance_results.csv flags an assumption warning for Q6 x year: 'Expected frequency < 5 in some cells' (min_expected_freq=0.5). This is driven by the extreme rarity of score 1 (n=1 total). The chi-square result may be slightly unreliable, though the magnitude of the shift (chi2=76.3) is so large that the practical conclusion is unaffected. The Explorer did not flag this assumption warning — it should be noted."
+        },
+        {
+          "original_claim": "NPS improved dramatically in 2026, with a clear shift from passive/detractor territory toward promoter scores. High scores (8-10) were heavily concentrated in 2026, while low scores (0-5) were heavily 2025-skewed — indicating the brand is generating more advocates and fewer critics.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q10_nps.csv: Score 10: 2026=54/66=81.82%, 2025=12/66=18.18%. Score 8: 2026=80/108=74.07%, 2025=28/108=25.93%. Score 2: 2026=7/34=20.59%, 2025=27/34=79.41%. All match exactly. NPS calculation: Promoters (9+10)=(83+66)/800=149/800=18.625%; Detractors (0-6)=(7+23+34+52+100+111+103)/800=430/800=53.75%; NPS=-35.125. significance_results.csv: chi2=130.976, p=0.0.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "significance_results.csv flags an assumption warning for Q10 x year: 'Expected frequency < 5 in some cells' (min_expected_freq=3.5). This is expected given the 11-point NPS scale distributed across 2 waves, creating some thin cells. At chi2=130.976 with 10 df, the result remains overwhelmingly significant even accounting for this. The Explorer acknowledged the negative overall NPS (-35) as a tempering factor — this is appropriate. The Explorer did not explicitly flag the chi-square assumption warning."
+        }
+      ]
+    },
+    {
+      "theme_name": "Acme Is Gaining Ground on Its Primary Competitor, Crimson Crown Berries",
+      "theme_assessment": "Both claims are verified with exact number matches from banner tables.",
+      "claims": [
+        {
+          "original_claim": "Crimson Crown Berries — Acme's closest competitor by both aided awareness and purchase rate — lost purchase share in 2026 exactly as Acme gained it. This pattern is consistent with Acme recruiting buyers from the category leader rather than simply converting light category users.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q4_purchased_Crimson_Crown_Berries.csv: 2025=195/400=48.75%; 2026=143/400=35.75%. significance_results.csv: chi2=13.3251, p=0.000262. banner_year_Q4_purchased_Acme_Strawberries.csv: 2025=114/400=28.5%; 2026=168/400=42.0%. banner_year_Q11_brand_preference.csv: Crimson Crown 2025=114/370=30.81%; 2026=92/384=23.96%. All figures match exactly.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The Explorer's connections note contains a slight error in framing: 'Crimson Crown's still-higher overall preference share (23.96% vs Acme's 34.38% — note Acme now leads)' — this is internally contradictory phrasing. The data shows Acme at 34.38% and Crimson Crown at 23.96%, so Acme leads. The parenthetical 'note Acme now leads' corrects the 'still-higher' framing. The claim text itself is correctly interpreted. The causal inference (Acme recruiting from Crimson Crown) is plausible but cannot be definitively proven from cross-sectional wave data alone — a panel design would be needed to confirm individual switching."
+        },
+        {
+          "original_claim": "Acme's purchase frequency among buyers increased in 2026, with the weekly-or-more buyer segment tripling from 3.0% (12/400) to 9.75% (39/400). This indicates growing loyalty depth, not just trial expansion.",
+          "verdict": "VERIFIED",
+          "source_check": "banner_year_Q8_acme_frequency.csv: 'Very often - weekly or more': 2025=12/400=3.0%; 2026=39/400=9.75%. 'Often - 2-3 times a month': 2025=27/400=6.75%; 2026=51/400=12.75%. 'Never': 2025=238/400=59.5%; 2026=181/400=45.25%. High-frequency combined (often+very often): 2025=(27+12)/400=9.75%; 2026=(51+39)/400=22.5%. significance_results.csv: chi2=29.6579, p=0.000006. All figures match exactly.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The claim that weekly-or-more 'tripled' is accurate (3.0% to 9.75% = 3.25x). The note that category frequency (Q7) showed no significant year-over-year change is confirmed by significance_results.csv (p=0.142958, not significant). This supports the share-of-wallet interpretation."
+        }
+      ]
+    },
+    {
+      "theme_name": "Key Drivers of Purchase Intent: Sensory Quality Dominates, Value and Availability Are Minor Factors",
+      "theme_assessment": "All three claims are verified directly against derived_importance.csv. All figures match exactly.",
+      "claims": [
+        {
+          "original_claim": "Three sensory quality attributes — 'High quality overall,' 'Taste fresh,' and 'Excellent sweetness/flavor' — account for the top three drivers of purchase intent, with large gaps between them and functional attributes like value and availability.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Rank 1 Q5_01_quality_overall r=0.4379, beta=0.3358; Rank 2 Q5_02_freshness r=0.3857, beta=0.3003; Rank 3 Q5_03_sweetness_flavor r=0.2886, beta=0.2159. All match exactly. Gap between rank 3 (beta=0.2159) and rank 4 trust (beta=0.1361) is substantial.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The derived importance analysis uses regression-based standardized betas, which can be affected by multicollinearity among correlated sensory attributes. The three top attributes are likely intercorrelated, which can inflate their individual betas or cause instability. This is a standard limitation of this methodology and is not flagged by the Explorer. The correlational nature of the analysis means the directional recommendation (invest in quality signals) is plausible but not causal."
+        },
+        {
+          "original_claim": "Brand trust, while ranked 4th in total importance (r=0.2144), shows a disproportionate unique contribution (beta=0.1361) compared to attributes with similar or higher correlation like consistency (r=0.1523, beta=0.0638) and appearance (r=0.1455, beta=0.0575). This means trust has independent explanatory power above and beyond what the sensory attributes capture.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Q5_10_trust r=0.2144, beta=0.1361, rank=4. Q5_06_consistency r=0.1523, beta=0.0638, rank=6. Q5_04_appearance r=0.1455, beta=0.0575, rank=7. All values match exactly. The observation that trust's beta (0.1361) is disproportionately large relative to its correlation (0.2144), compared to consistency where beta (0.0638) is much smaller than its correlation (0.1523), is arithmetically accurate.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The interpretation that trust has 'independent explanatory power' is consistent with multivariate regression logic — a high beta relative to bivariate r suggests low collinearity with other predictors. The Explorer's strategic conclusion (trust is a differentiator worth building) is reasonable but represents an inferential leap from correlational data."
+        },
+        {
+          "original_claim": "Wide availability is the lowest-ranked driver of purchase intent (r=0.0672, not significant at p=0.05, beta=-0.0003) — effectively zero unique contribution after accounting for other attributes.",
+          "verdict": "VERIFIED",
+          "source_check": "derived_importance.csv: Q5_07_availability r=0.0672, p=0.057554 (not significant at p=0.05), standardized_beta=-0.0003, rank=11. All figures match exactly.",
+          "corrected_values": null,
+          "corrected_claim": null,
+          "caveats": "The Explorer appropriately notes this finding is limited to respondents who are already category purchasers (screened sample). The negative beta is effectively zero and likely reflects numerical noise in the regression. The interpretive caveat about availability not being the binding constraint is appropriate."
+        }
+      ]
+    },
+    {
+      "theme_name": "Demographic Variation Is Narrow — Acme's Performance Is Broad-Based",
+      "theme_assessment": "The primary claim about low demographic variation is verified. The income-quality claim has a minor data issue with how the 'Strongly agree' cell percentages are calculated — the Explorer uses 87 as the denominator for all three income groups' score-5 counts, but the actual income group sizes differ substantially. The figures cited are row percentages (share of all score-5 respondents, not within-income-group rates), which changes the interpretation.",
+      "claims": [
+        {
+          "original_claim": "Age, gender, and region produce almost no statistically significant differences in brand awareness, purchase behavior, or brand evaluation. Of 190 demographic-question pairs tested, only 26 were significant at p<0.05 — and the majority of those are year (wave) effects.",
+          "verdict": "VERIFIED",
+          "source_check": "significance_results.csv contains 191 test rows (190 non-year demographic tests plus the year-variable tests). The year variable alone accounts for 19 tests. Of the 190 total tests counted by the Explorer, 26 have significant_05=True (confirmed by grep count). Age significant: Q3_aided_Harvest_Hill_Berries (p=0.041253) and Q5_08_sustainability (p=0.038821) — both confirmed. Gender significant: Q5_11_shelf_life (p=0.033841) — confirmed. Region (Q16_state): 0 significant tests — confirmed.",
+          "corrected_values": "The file contains 191 test rows total, not 190. However, one row may represent the year variable itself which the Explorer may have excluded from the demographic count. The 26 significant at p<0.05 count is confirmed.",
+          "corrected_claim": null,
+          "caveats": "The gender x shelf_life result (p=0.034) has expected frequency warning (min_expected_freq=0.73 < 5), meaning that result may be unreliable. The age x sustainability result (p=0.039) has expected frequency warning (min=5.73, borderline). The Explorer did not flag these warnings, which is a minor omission. The income demographic is not mentioned in this claim but Q17_income x Q5_01_quality_overall is significant (p=0.016) and Q17_income x Q7_category_frequency is significant (p=0.025) — these represent two additional significant demographic results not accounted for in the 26-count summary."
+        },
+        {
+          "original_claim": "Higher-income households ($100K+) show somewhat different quality perceptions, with the income x quality cross-tab reaching significance (p=0.016). However, the pattern is not linear: $50K-$99K households produced the most 'Strongly agree' responses (40/87 = 45.98%) on quality, while $100K+ and under $50K both scored lower.",
+          "verdict": "CHALLENGED",
+          "source_check": "banner_Q17_income_Q5_01_quality_overall.csv: Score 5 row shows $100K+=22, $50K-$99K=40, Under $50K=25, Total=87. The Explorer's percentages (25.29%, 45.98%, 28.74%) are ROW percentages — they represent each income group's share of all score-5 respondents (87 total), not the share of within-income-group respondents who gave score 5. The income group totals are $100K+=297, $50K-$99K=310, Under $50K=193. The WITHIN-GROUP rate for 'Strongly agree' is: $100K+=22/297=7.41%; $50K-$99K=40/310=12.90%; Under $50K=25/193=12.95%. significance_results.csv: chi2=18.845, p=0.015711, min_expected_freq=3.14 (assumption warning).",
+          "corrected_values": "The within-group 'Strongly agree' rates are: $100K+=7.41%, $50K-$99K=12.90%, Under $50K=12.95%. The Explorer's figures of 25.29%, 45.98%, 28.74% are the share of the 87 score-5 respondents from each income group — a different (and less meaningful) metric. The non-linear pattern holds regardless of which framing is used ($100K+ shows lower Strongly agree rates), but the magnitude and comparison are different. Additionally, the expected frequency warning (min=3.14 < 5) means the chi-square test may be unreliable.",
+          "corrected_claim": "Higher-income households ($100K+) show lower Strongly agree rates on overall quality (7.41% vs 12.90% for $50K-$99K and 12.95% for Under $50K), contributing to a significant overall distribution difference (chi2=18.845, p=0.016). However, this chi-square result should be treated cautiously as expected cell frequencies fall below 5 in some cells. The non-linear pattern (with $50K-$99K and Under $50K performing similarly, while $100K+ lags) is real but the practical quality perception gap across income segments is modest.",
+          "caveats": "The expected frequency warning (min_expected_freq=3.14) means the chi-square p-value for this test is potentially unreliable. The Explorer did not flag this warning. The interpretation that $50K-$99K is 'the strongest quality advocate' is directionally accurate but the margin over Under $50K is negligible (12.90% vs 12.95% within-group rates)."
+        }
+      ]
+    },
+    {
+      "theme_name": "Current Brand Health Scores Remain Below Aspirational Benchmarks Despite Progress",
+      "theme_assessment": "Both claims are verified with exact or near-exact number matches from frequency tables.",
+      "claims": [
+        {
+          "original_claim": "Despite the year-over-year progress, Acme's absolute ratings on key quality attributes remain centered at neutral (scale midpoint 3), with most respondents neither agreeing nor disagreeing that Acme has high quality, tastes fresh, or is consistently good. The modal response is '3 - Neither agree nor disagree' for every attribute evaluated.",
+          "verdict": "VERIFIED",
+          "source_check": "freq_Q5_01_quality_overall.csv: modal=3 (count=330, 41.25%); top-2-box (4+5)=226+87=313/800=39.125% (Explorer says 39.13% — correct). freq_Q5_02_freshness.csv: modal=3 (count=319, 39.88%); top-2-box=257+61=318/800=39.75% (Explorer says 39.74% — minor rounding). freq_Q5_10_trust.csv: modal=3 (count=391, 48.88%); top-2-box=167+42=209/800=26.125% (Explorer says 26.13% — correct).",
+          "corrected_values": "Q5_02 freshness top-2-box is 39.75%, not 39.74% as stated. This is a rounding artifact (318/800=0.3975 exactly). No material correction needed.",
+          "corrected_claim": null,
+          "caveats": "The claim about 'every attribute' having a modal response of 3 is verified for the three cited attributes. The Explorer does not test all 11 attributes, but the pattern is consistent with the data for quality, freshness, and trust."
+        },
+        {
+          "original_claim": "Purchase intent remains predominantly neutral: 58.25% of all respondents chose '3' (the midpoint) on the 5-point intent scale, and only 28.76% indicated probable or definite purchase (scores 4+5). A negative NPS of approximately -35 (promoters: 18.63% at scores 9-10 minus detractors: 53.75% at scores 0-6) confirms that the brand is not yet generating advocacy at scale.",
+          "verdict": "VERIFIED",
+          "source_check": "freq_Q6_purchase_intent.csv: score 3=466/800=58.25%; scores 4+5=(223+7)/800=230/800=28.75% (Explorer says 28.76% — rounding). freq_Q10_nps.csv: Promoters (9+10)=(83+66)/800=149/800=18.625% (Explorer says 18.63%); Detractors (0-6)=(7+23+34+52+100+111+103)/800=430/800=53.75%; NPS=18.625-53.75=-35.125 (Explorer says approximately -35). All verified.",
+          "corrected_values": "Purchase intent positive scores 4+5 = 28.75%, not 28.76% (rounding). NPS promoter rate is 18.625%, not 18.63% (rounding). These are trivial rounding differences with no analytical consequence.",
+          "corrected_claim": null,
+          "caveats": "The NPS detractor count: 7+23+34+52+100+111+103=430. Verified: 7+23=30; +34=64; +52=116; +100=216; +111=327; +103=430. Confirmed. The overall picture of a brand with negative NPS despite improving trends is accurately characterized."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_claims": 13,
+    "verified": 12,
+    "challenged": 1,
+    "partial": 0,
+    "overall_assessment": "The Explorer's insights are of high quality overall. Twelve of thirteen claims are fully verified against source CSVs, with numbers matching to the level of rounding precision. The one challenged claim involves a methodological framing error in the income-quality cross-tab: the Explorer presents row percentages (share of all score-5 respondents from each income group) as if they were within-group rates, which overstates the income group differences. The corrected within-group rates still support the directional finding ($100K+ has lower Strongly agree rates) but reduce the apparent magnitude of the effect. Additionally, the Explorer does not flag two chi-square assumption warnings that apply to the purchase intent and NPS significance tests (expected cell frequencies < 5), which should be noted as caveats in any final report. The claim about 190 significance tests likely reflects an off-by-one in counting the file rows (191 rows observed), but the count of 26 significant at p<0.05 is confirmed exactly. The Explorer's narrative — that Acme has turned a corner but is mid-journey, with a large neutral segment representing the primary conversion opportunity — is well-supported by the data."
+  }
+}

@@ -3,7 +3,7 @@
  * Three solution sections using the reusable SolutionSection component
  * 1. Focus Group / Transcript Analysis — with one-pager modal
  * 2. Survey Analysis & Reporting — with one-pager modal
- * 3. Brand & Marketing Analytics — capabilities only (no one-pager yet)
+ * 3. Brand Health Tracking — with one-pager modal
  *
  * DESIGN: The Studio — Warm White & Copper
  */
@@ -12,6 +12,7 @@ import { useState } from "react";
 import SolutionSection from "./SolutionSection";
 import FocusGroupOnePager from "./FocusGroupOnePager";
 import SurveyAnalysisOnePager from "./SurveyAnalysisOnePager";
+import BrandHealthOnePager from "./BrandHealthOnePager";
 import {
   FileText,
   Shield,
@@ -20,21 +21,20 @@ import {
   Brain,
   Target,
   TrendingUp,
-  Users,
   Layers,
-  Search,
   RefreshCw,
-  LineChart,
 } from "lucide-react";
 
 const THUMB_FOCUS_GROUP =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/thumb-focus-group-gPENuNgG8L4JHsC8ZEa8TB.webp";
 const THUMB_SURVEY =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/thumb-survey-analysis-9yhUCzHq72Yiwr54PpjkVQ.webp";
+const THUMB_BRAND_HEALTH = "/thumb-brand-health.jpg";
 
 export default function Solutions() {
   const [focusGroupOpen, setFocusGroupOpen] = useState(false);
   const [surveyOpen, setSurveyOpen] = useState(false);
+  const [brandHealthOpen, setBrandHealthOpen] = useState(false);
 
   return (
     <>
@@ -105,32 +105,35 @@ export default function Solutions() {
         ]}
       />
 
-      {/* Solution 3: Brand & Marketing Analytics — no one-pager yet */}
+      {/* Solution 3: Brand Health Tracking */}
       <SolutionSection
         eyebrow="Solution 3"
-        title="Brand & Marketing Analytics"
-        description="The same AI architecture applied to the problems marketing teams face every day — tracking brand health, understanding campaign effectiveness, synthesizing competitive intelligence, and turning customer feedback into strategic direction."
+        title="Brand Health Tracking"
+        description="Two years of tracking data, seven competitors, 800 respondents per wave — analyzed, verified, and delivered as a stakeholder-ready report and executive briefing in a single run. The same multi-agent system adapted for longitudinal brand health studies."
         className="bg-background"
+        onePagerThumbnail={THUMB_BRAND_HEALTH}
+        onePagerLabel="Brand Health Tracking Survey"
+        onOnePagerClick={() => setBrandHealthOpen(true)}
         capabilities={[
           {
             icon: TrendingUp,
-            title: "Brand Health Monitoring",
-            text: "Automated ingestion and analysis of brand tracking data across markets — surfacing trends, anomalies, and competitive shifts without waiting for the quarterly deck.",
+            title: "Wave-Over-Wave Trend Analysis",
+            text: "Automatically detects and quantifies shifts in awareness, perception, and purchase behavior across survey waves — surfacing what's changing, what's stable, and what needs attention.",
           },
           {
-            icon: Users,
-            title: "Customer Sentiment Synthesis",
-            text: "Aggregates and analyzes feedback across channels — reviews, NPS, social, support tickets — to produce a unified view of how customers perceive your brand.",
+            icon: Target,
+            title: "Derived Importance Analysis",
+            text: "Correlates brand attribute ratings with purchase intent to identify which perceptions actually drive buying decisions — not just what scores highest, but what matters most.",
           },
           {
-            icon: Search,
-            title: "Competitive Intelligence Automation",
-            text: "Systematic monitoring and analysis of competitor positioning, messaging, and market activity — distilled into structured briefs your team can act on.",
+            icon: BarChart3,
+            title: "Full Competitive Landscape",
+            text: "Tracks unaided and aided awareness, purchase behavior, and brand preference across all competitors — with significance testing on every demographic cross-tabulation.",
           },
           {
-            icon: LineChart,
-            title: "Campaign & Creative Effectiveness",
-            text: "Connects research data to marketing outcomes — which messages resonate, which audiences respond, and where to allocate budget based on evidence rather than intuition.",
+            icon: Shield,
+            title: "123 Statistics, Zero Errors",
+            text: "Every number in the final report independently verified against raw source data by a dedicated verification agent — with automatic correction loops when discrepancies are found.",
           },
         ]}
       />
@@ -143,6 +146,10 @@ export default function Solutions() {
       <SurveyAnalysisOnePager
         open={surveyOpen}
         onOpenChange={setSurveyOpen}
+      />
+      <BrandHealthOnePager
+        open={brandHealthOpen}
+        onOpenChange={setBrandHealthOpen}
       />
     </>
   );

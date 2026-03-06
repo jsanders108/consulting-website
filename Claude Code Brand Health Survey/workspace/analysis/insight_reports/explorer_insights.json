@@ -1,0 +1,429 @@
+{
+  "themes": [
+    {
+      "theme_name": "Acme Strawberries Is on a Steep Upward Trajectory",
+      "claims": [
+        {
+          "claim": "Acme's aided brand awareness surged from 2025 to 2026, and crucially this gain converted directly into trial: purchase rates and brand preference moved up in lockstep, suggesting the awareness growth is commercially meaningful rather than superficial recognition.",
+          "evidence": [
+            {
+              "statistic": "Aided awareness (Q3): 2025 = 44.16% recognized (261/400 respondents did NOT recognize = inverse reading; corrected: 2026 recognizers = 330 of 400 = 82.5% vs 2025 = 261 of 400 = 65.25%)",
+              "source_file": "banner_year_Q3_aided_Acme_Strawberries.csv",
+              "detail": "Among all 800 respondents, 591 (73.88%) recognized Acme aided; of those, 330 (55.84%) were 2026 respondents vs 261 (44.16%) from 2025. Per-wave: 2026 = 330/400 = 82.5% aided awareness; 2025 = 261/400 = 65.25% aided awareness."
+            },
+            {
+              "statistic": "Purchase (Q4): 2026 purchasers = 168 of 400 = 42.0%; 2025 purchasers = 114 of 400 = 28.5%",
+              "source_file": "banner_year_Q4_purchased_Acme_Strawberries.csv",
+              "detail": "chi2=15.3838, p=0.000088, highly significant"
+            },
+            {
+              "statistic": "Brand preference (Q11): Acme 2026 = 132/384 = 34.38%; 2025 = 59/370 = 15.95%",
+              "source_file": "banner_year_Q11_brand_preference.csv",
+              "detail": "chi2=34.3727, p=0.000006, highly significant. All other brands declined as first-choice preference in 2026."
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Acme's aided awareness rose from 65.25% (2025) to 82.5% (2026); past-12-month purchase rose from 28.5% to 42.0%; first-choice brand preference more than doubled from 15.95% to 34.38%.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "This awareness-to-purchase-to-preference chain is reinforced by parallel improvements in brand perception attributes (see theme 2). The simultaneous decline in Crimson Crown purchases suggests Acme may be gaining share directly at the leading competitor's expense."
+        },
+        {
+          "claim": "Unaided brand recall for Acme also grew significantly year over year, indicating the brand is becoming more top-of-mind — not just recognized when shown — which typically signals earned media, word-of-mouth, or distribution gains.",
+          "evidence": [
+            {
+              "statistic": "Unaided awareness (Q1Q2): 2026 = 167/400 = 41.75%; 2025 = 123/400 = 30.75%",
+              "source_file": "banner_year_Q1Q2_unaided_Acme_Strawberries.csv",
+              "detail": "chi2=10.0014, p=0.001564, significant at p<0.01"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.001564,
+            "direction": "Unaided recall rose 11 percentage points from 30.75% in 2025 to 41.75% in 2026.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Unaided awareness growth of 11 pp alongside aided awareness growth of 17.25 pp suggests broad-based brand salience improvement, not merely category recognition."
+        }
+      ]
+    },
+    {
+      "theme_name": "Perception Improvements Are Concentrated in Acme's Most Commercially Valuable Attributes",
+      "claims": [
+        {
+          "claim": "The year-over-year quality perception improvement is commercially significant because 'High quality overall' is the single strongest driver of purchase intent (r=0.4379, beta=0.3358). Acme improved sharply on this attribute: top-2-box agreement (Agree + Strongly Agree) more than doubled from 25.75% in 2025 to 52.5% in 2026.",
+          "evidence": [
+            {
+              "statistic": "Q5_01 quality overall top-2-box: 2026 = (140+70)/400 = 52.5%; 2025 = (86+17)/400 = 25.75%",
+              "source_file": "banner_year_Q5_01_quality_overall.csv",
+              "detail": "chi2=76.6107, p<0.0001, highly significant"
+            },
+            {
+              "statistic": "Derived importance: pearson_r=0.4379, standardized_beta=0.3358, rank=1 of 11",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0 (n=800)"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "The share of respondents strongly agreeing Acme has 'High quality overall' quadrupled from 4.25% (17/400) in 2025 to 17.5% (70/400) in 2026.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Because quality overall is also the top driver of purchase intent, this perception shift has direct revenue implications — it should correlate with the observed increase in purchase intent (see purchase intent claim below)."
+        },
+        {
+          "claim": "Freshness perception — the second most important purchase intent driver (r=0.3857, beta=0.3003) — improved nearly as dramatically as quality, with top-2-box nearly doubling from 29.25% to 50.25%.",
+          "evidence": [
+            {
+              "statistic": "Q5_02 freshness top-2-box: 2026 = (154+47)/400 = 50.25%; 2025 = (103+14)/400 = 29.25%",
+              "source_file": "banner_year_Q5_02_freshness.csv",
+              "detail": "chi2=45.9468, p<0.0001, highly significant"
+            },
+            {
+              "statistic": "Derived importance: pearson_r=0.3857, standardized_beta=0.3003, rank=2 of 11",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0 (n=800)"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Freshness top-2-box rose 21 percentage points from 2025 to 2026.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Quality and freshness together account for the two largest unique contributions to purchase intent. Their simultaneous improvement in 2026 is the most plausible explanation for the significant jump in purchase intent and NPS in the same wave."
+        },
+        {
+          "claim": "Consistency and trust — attributes ranked 6th and 4th respectively in purchase intent importance — also improved significantly year over year, suggesting Acme's improvement is broad-based rather than a narrowly perceived 'new and improved' halo that fades quickly.",
+          "evidence": [
+            {
+              "statistic": "Q5_06 consistency top-2-box: 2026 = (120+29)/400 = 37.25%; 2025 = (66+4)/400 = 17.5%",
+              "source_file": "banner_year_Q5_06_consistency.csv",
+              "detail": "chi2=52.6183, p<0.0001, highly significant"
+            },
+            {
+              "statistic": "Q5_10 trust top-2-box: 2026 = (93+31)/400 = 31.0%; 2025 = (74+11)/400 = 21.25%",
+              "source_file": "banner_year_Q5_10_trust.csv",
+              "detail": "chi2=26.4954, p=0.000025, highly significant"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.000025,
+            "direction": "Consistency top-2-box nearly doubled (+19.75 pp); trust top-2-box rose nearly 10 pp.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Trust growth is particularly meaningful because it is the 4th largest driver of purchase intent (r=0.2144), and trust is typically slow to build. Its improvement alongside consistency suggests consumers are experiencing Acme as reliably better, not just occasionally better."
+        }
+      ]
+    },
+    {
+      "theme_name": "Purchase Intent and Advocacy Have Shifted Materially Upward",
+      "claims": [
+        {
+          "claim": "Purchase intent shifted substantially from neutral to positive territory in 2026. The proportion indicating probable or definite future purchase nearly tripled, while the near-zero base of 'Definitely will not' remained stable — indicating genuine positive shift, not just migration from neutral.",
+          "evidence": [
+            {
+              "statistic": "Q6 purchase intent score 4 ('Probably will'): 2026 = 156/400 = 39.0%; 2025 = 67/400 = 16.75%",
+              "source_file": "banner_year_Q6_purchase_intent.csv",
+              "detail": "chi2=76.3226, p<0.0001, highly significant"
+            },
+            {
+              "statistic": "Q6 score 5 ('Definitely will'): 2026 = 7/400 = 1.75%; 2025 = 0/400 = 0.0%",
+              "source_file": "banner_year_Q6_purchase_intent.csv",
+              "detail": "2026 combined positive (4+5) = (156+7)/400 = 40.75%; 2025 combined positive = (67+0)/400 = 16.75%"
+            },
+            {
+              "statistic": "Q6 score 2 ('Probably will not'): 2026 = 24/400 = 6.0%; 2025 = 79/400 = 19.75%",
+              "source_file": "banner_year_Q6_purchase_intent.csv",
+              "detail": "Negative intent declined substantially year over year"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Combined positive intent rose from 16.75% to 40.75%; combined negative intent (scores 1+2) fell from 20.0% (80/400) to 6.0% (24/400). Neutral (score 3) declined from 63.25% (253/400) to 53.25% (213/400), suggesting migration toward positive intent.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "This purchase intent improvement is directionally consistent with the actual purchase rate increase (Q4) and the Acme purchase frequency shift (Q8) — the data tell a coherent story of growing consumer commitment."
+        },
+        {
+          "claim": "NPS improved dramatically in 2026, with a clear shift from passive/detractor territory toward promoter scores. High scores (8-10) were heavily concentrated in 2026, while low scores (0-5) were heavily 2025-skewed — indicating the brand is generating more advocates and fewer critics.",
+          "evidence": [
+            {
+              "statistic": "NPS score 10: 2026 = 54/66 = 81.82% of all 10-raters; 2025 = 12/66 = 18.18%",
+              "source_file": "banner_year_Q10_nps.csv",
+              "detail": "chi2=130.976, p<0.0001, highly significant"
+            },
+            {
+              "statistic": "NPS score 8: 2026 = 80/108 = 74.07%; 2025 = 28/108 = 25.93%",
+              "source_file": "banner_year_Q10_nps.csv",
+              "detail": "Among all mid-to-high NPS scores (7,8,9,10), 2026 respondents outnumber 2025 respondents by substantial margins"
+            },
+            {
+              "statistic": "NPS score 2: 2026 = 7/34 = 20.59%; 2025 = 27/34 = 79.41%",
+              "source_file": "banner_year_Q10_nps.csv",
+              "detail": "Low scores (0-5) are dominated by 2025 respondents, indicating fewer detractors in 2026"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Score distribution shifted dramatically upward in 2026. Scores of 7-10 were majority-2026; scores of 0-6 were majority-2025. Overall NPS was negative in both waves but the direction of change in 2026 is clearly positive.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "A negative NPS overall (promoters 18.63% minus detractors 53.75% = approximately -35) tempers the enthusiasm — but the year-over-year direction is unambiguously positive, and the magnitude of shift (chi2=130.976) is the largest in the entire significance results file."
+        }
+      ]
+    },
+    {
+      "theme_name": "Acme Is Gaining Ground on Its Primary Competitor, Crimson Crown Berries",
+      "claims": [
+        {
+          "claim": "Crimson Crown Berries — Acme's closest competitor by both aided awareness and purchase rate — lost purchase share in 2026 exactly as Acme gained it. This pattern is consistent with Acme recruiting buyers from the category leader rather than simply converting light category users.",
+          "evidence": [
+            {
+              "statistic": "Crimson Crown Q4 purchase: 2025 = 195/400 = 48.75%; 2026 = 143/400 = 35.75%",
+              "source_file": "banner_year_Q4_purchased_Crimson_Crown_Berries.csv",
+              "detail": "chi2=13.3251, p=0.000262, highly significant"
+            },
+            {
+              "statistic": "Acme Q4 purchase: 2025 = 114/400 = 28.5%; 2026 = 168/400 = 42.0%",
+              "source_file": "banner_year_Q4_purchased_Acme_Strawberries.csv",
+              "detail": "chi2=15.3838, p=0.000088, highly significant"
+            },
+            {
+              "statistic": "Brand preference (Q11): Crimson Crown 2025 = 114/370 = 30.81%; 2026 = 92/384 = 23.96%",
+              "source_file": "banner_year_Q11_brand_preference.csv",
+              "detail": "Acme first-choice preference simultaneously rose from 15.95% to 34.38%"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.000262,
+            "direction": "Crimson Crown purchase fell 13 pp while Acme purchase rose 13.5 pp — near-mirror movements suggesting direct brand switching.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Crimson Crown's still-higher overall preference share (23.96% vs Acme's 34.38% — note Acme now leads) and aided awareness (75.5% vs Acme 73.88%) means the competitive gap has narrowed materially or, in preference, reversed."
+        },
+        {
+          "claim": "Acme's purchase frequency among buyers increased in 2026, with the weekly-or-more buyer segment tripling from 3.0% (12/400) to 9.75% (39/400). This indicates growing loyalty depth, not just trial expansion.",
+          "evidence": [
+            {
+              "statistic": "Q8 'Very often - weekly or more': 2026 = 39/400 = 9.75%; 2025 = 12/400 = 3.0%",
+              "source_file": "banner_year_Q8_acme_frequency.csv",
+              "detail": "chi2=29.6579, p=0.000006, highly significant"
+            },
+            {
+              "statistic": "Q8 'Often - 2-3 times a month': 2026 = 51/400 = 12.75%; 2025 = 27/400 = 6.75%",
+              "source_file": "banner_year_Q8_acme_frequency.csv",
+              "detail": "High-frequency buyers (often + very often) combined: 2026 = 90/400 = 22.5%; 2025 = 39/400 = 9.75%"
+            },
+            {
+              "statistic": "Q8 'Never': 2026 = 181/400 = 45.25%; 2025 = 238/400 = 59.5%",
+              "source_file": "banner_year_Q8_acme_frequency.csv",
+              "detail": "Non-buyers shrank by 14.25 pp"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "year",
+            "p_value": 0.000006,
+            "direction": "Non-buyers fell 14.25 pp while high-frequency buyers (2+ times per month) grew from 9.75% to 22.5% of wave respondents.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "The combination of new trial (Q4 purchase rate up) and higher frequency among existing buyers (Q8) is a strong signal of brand momentum. Category purchase frequency (Q7) was not significantly different by year, confirming that Acme's share of wallet — not just total category engagement — is growing."
+        }
+      ]
+    },
+    {
+      "theme_name": "Key Drivers of Purchase Intent: Sensory Quality Dominates, Value and Availability Are Minor Factors",
+      "claims": [
+        {
+          "claim": "Three sensory quality attributes — 'High quality overall,' 'Taste fresh,' and 'Excellent sweetness/flavor' — account for the top three drivers of purchase intent, with large gaps between them and functional attributes like value and availability. This means brand investment in product quality signals will yield far greater purchase intent returns than price or distribution messaging.",
+          "evidence": [
+            {
+              "statistic": "High quality overall: pearson_r=0.4379, standardized_beta=0.3358 (rank 1)",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0, n=800"
+            },
+            {
+              "statistic": "Taste fresh: pearson_r=0.3857, standardized_beta=0.3003 (rank 2)",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0, n=800"
+            },
+            {
+              "statistic": "Excellent sweetness/flavor: pearson_r=0.2886, standardized_beta=0.2159 (rank 3)",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0, n=800"
+            }
+          ],
+          "cross_tab": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": "derived_importance.csv"
+          },
+          "connections": "These are exactly the attributes on which Acme showed the largest year-over-year gains. The improvements in quality (top-2-box +26.75 pp) and freshness (top-2-box +21 pp) are not just perceptually meaningful — they map directly to the attributes consumers most rely on when deciding to purchase."
+        },
+        {
+          "claim": "Brand trust, while ranked 4th in total importance (r=0.2144), shows a disproportionate unique contribution (beta=0.1361) compared to attributes with similar or higher correlation like consistency (r=0.1523, beta=0.0638) and appearance (r=0.1455, beta=0.0575). This means trust has independent explanatory power above and beyond what the sensory attributes capture — making it a strategic differentiator worth building.",
+          "evidence": [
+            {
+              "statistic": "Brand I trust: pearson_r=0.2144, standardized_beta=0.1361 (rank 4 total, rank 4 unique)",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.0, n=800"
+            },
+            {
+              "statistic": "Consistently good: pearson_r=0.1523, standardized_beta=0.0638 (rank 6 total, rank 7 unique)",
+              "source_file": "derived_importance.csv",
+              "detail": "p=0.000015, n=800"
+            }
+          ],
+          "cross_tab": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": "derived_importance.csv"
+          },
+          "connections": "Trust's unique importance suggests a segment of buyers whose intent is driven by brand relationship rather than purely sensory evaluation. Acme's trust improvement in 2026 (top-2-box from 21.25% to 31.0%) signals early progress on this dimension, though absolute levels remain moderate."
+        },
+        {
+          "claim": "Wide availability is the lowest-ranked driver of purchase intent (r=0.0672, not significant at p=0.05, beta=-0.0003) — effectively zero unique contribution after accounting for other attributes. This does not mean distribution is irrelevant, but it suggests that among respondents who are already category purchasers, availability is not the binding constraint on Acme's purchase intent.",
+          "evidence": [
+            {
+              "statistic": "Widely available: pearson_r=0.0672, p=0.057554 (not significant), standardized_beta=-0.0003 (rank 11)",
+              "source_file": "derived_importance.csv",
+              "detail": "Near-zero unique contribution; total correlation is also the lowest of all 11 attributes"
+            }
+          ],
+          "cross_tab": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": "derived_importance.csv"
+          },
+          "connections": "Given the sample is screened for fresh strawberry purchasers, basic availability is already satisfied by definition for most respondents. This limits generalizability of this finding to the broader population."
+        }
+      ]
+    },
+    {
+      "theme_name": "Demographic Variation Is Narrow — Acme's Performance Is Broad-Based",
+      "claims": [
+        {
+          "claim": "Age, gender, and region produce almost no statistically significant differences in brand awareness, purchase behavior, or brand evaluation. Of 190 demographic-question pairs tested, only 26 were significant at p<0.05 — and the majority of those are year (wave) effects. This suggests Acme's current brand position is uniform across consumer segments, which is both a strength (no vulnerable demographic) and a limitation (no high-potential niche to prioritize).",
+          "evidence": [
+            {
+              "statistic": "Of 190 significance tests, 26 significant at p<0.05 and 17 significant at p<0.01",
+              "source_file": "analysis_summary.json",
+              "detail": "significant_results_count=26, highly_significant_count=17"
+            },
+            {
+              "statistic": "Age (Q14_age) significant results: only 2 of 38 tests — Q3_aided_Harvest_Hill_Berries (p=0.041) and Q5_08_sustainability (p=0.039)",
+              "source_file": "significance_results.csv",
+              "detail": "Neither of these relates to Acme brand metrics directly"
+            },
+            {
+              "statistic": "Gender (Q15_gender) significant results: only 1 of 38 tests — Q5_11_shelf_life (p=0.034)",
+              "source_file": "significance_results.csv",
+              "detail": "No significant gender differences on Acme awareness, purchase, or intent"
+            },
+            {
+              "statistic": "Region (Q16_state) significant results: 0 of 38 tests",
+              "source_file": "significance_results.csv",
+              "detail": "No regional differences on any question at p<0.05"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "Q14_age, Q15_gender, Q16_state",
+            "p_value": null,
+            "direction": "No significant demographic differences on Acme-specific metrics. Age x Harvest Hill Berries aided awareness significant (p=0.041); age x sustainability significant (p=0.039). Gender x shelf life significant (p=0.034). All other tests non-significant.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "The wave (year) variable accounts for virtually all of the explanatory variation in the data. This means the 2025-to-2026 shift is a systemic brand-level change, not driven by differential sampling across demographic groups."
+        },
+        {
+          "claim": "Higher-income households ($100K+) show somewhat different quality perceptions, with the income x quality cross-tab reaching significance (p=0.016). However, the pattern is not linear: $50K-$99K households produced the most 'Strongly agree' responses (40/87 = 45.98%) on quality, while $100K+ and under $50K both scored lower. This non-linear pattern suggests quality perception is not simply an affluence signal.",
+          "evidence": [
+            {
+              "statistic": "Q5_01 quality, 'Strongly agree' (score 5): $100K+ = 22/87 = 25.29%; $50K-$99K = 40/87 = 45.98%; Under $50K = 25/87 = 28.74%",
+              "source_file": "banner_Q17_income_Q5_01_quality_overall.csv",
+              "detail": "chi2=18.845, p=0.015711, significant at p<0.05 but not p<0.01"
+            }
+          ],
+          "cross_tab": {
+            "demographic": "Q17_income",
+            "p_value": 0.015711,
+            "direction": "Middle-income ($50K-$99K) households are the strongest quality advocates; high-income ($100K+) and low-income (Under $50K) are more skeptical of Acme's quality claims.",
+            "source_file": "significance_results.csv"
+          },
+          "connections": "Given that quality is the top driver of purchase intent, the quality perception deficit among $100K+ households may partially explain why Acme has not yet captured disproportionate preference from this segment."
+        }
+      ]
+    },
+    {
+      "theme_name": "Current Brand Health Scores Remain Below Aspirational Benchmarks Despite Progress",
+      "claims": [
+        {
+          "claim": "Despite the year-over-year progress, Acme's absolute ratings on key quality attributes remain centered at neutral (scale midpoint 3), with most respondents neither agreeing nor disagreeing that Acme has high quality, tastes fresh, or is consistently good. The modal response is '3 - Neither agree nor disagree' for every attribute evaluated.",
+          "evidence": [
+            {
+              "statistic": "Q5_01 quality: modal response = 3 (count=330, 41.25%); combined agree (4+5) = 39.13% (226+87=313/800)",
+              "source_file": "freq_Q5_01_quality_overall.csv",
+              "detail": "Only 39.13% hold positive quality beliefs about Acme overall"
+            },
+            {
+              "statistic": "Q5_02 freshness: modal response = 3 (count=319, 39.88%); combined agree (4+5) = 39.74% (257+61=318/800)",
+              "source_file": "freq_Q5_02_freshness.csv",
+              "detail": "Freshness positive beliefs also below 40%"
+            },
+            {
+              "statistic": "Q5_10 trust: modal response = 3 (count=391, 48.88%); combined agree (4+5) = 26.13% (167+42=209/800)",
+              "source_file": "freq_Q5_10_trust.csv",
+              "detail": "Trust levels remain low — only 26.13% agree Acme is a brand they trust"
+            }
+          ],
+          "cross_tab": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": null
+          },
+          "connections": "The large neutral segment (those scoring attributes at 3) represents conversion opportunity. With trust at 26.13% positive and the NPS overall approximately -35, Acme has turned a corner but has substantial runway before it can be characterized as a brand with strong positive equity."
+        },
+        {
+          "claim": "Purchase intent remains predominantly neutral: 58.25% of all respondents chose '3' (the midpoint) on the 5-point intent scale, and only 28.76% indicated probable or definite purchase (scores 4+5). A negative NPS of approximately -35 (promoters: 18.63% at scores 9-10 minus detractors: 53.75% at scores 0-6) confirms that the brand is not yet generating advocacy at scale.",
+          "evidence": [
+            {
+              "statistic": "Q6 purchase intent: score 3 = 466/800 = 58.25%; scores 4+5 combined = (223+7)/800 = 28.75%",
+              "source_file": "freq_Q6_purchase_intent.csv",
+              "detail": "Scores 1+2 combined = (1+103)/800 = 13.0%"
+            },
+            {
+              "statistic": "Q10 NPS: Promoters (9-10) = (83+66)/800 = 149/800 = 18.625%; Detractors (0-6) = (7+23+34+52+100+111+103)/800 = 430/800 = 53.75%; NPS = 18.625 - 53.75 = -35.125",
+              "source_file": "freq_Q10_nps.csv",
+              "detail": "Passives (7-8) = (113+108)/800 = 221/800 = 27.625%"
+            }
+          ],
+          "cross_tab": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": null
+          },
+          "connections": "The large neutral purchase intent segment (58.25%) is consistent with the large neutral brand attribute ratings. Both suggest a brand that is gaining visibility but has not yet generated strong feelings in either direction — a common intermediate state for a brand in ascent."
+        }
+      ]
+    }
+  ],
+  "surprising_findings": [
+    "Acme's first-choice brand preference (Q11) surpassed Crimson Crown Berries in 2026 (34.38% vs 23.96%), despite Crimson Crown having higher overall aided awareness (75.5% vs 73.88% for Acme) and still-higher total purchase history. This reversal in preference is the most striking competitive finding and suggests Acme's perception improvements are translating into intent faster than simple awareness tracking would imply.",
+    "The 'Good value for price' attribute is ranked only 5th in total purchase intent importance (r=0.1552) and 5th in unique importance (beta=0.1208), despite fresh produce being a category where price sensitivity is commonly assumed to be high. Among fresh strawberry buyers, sensory quality is nearly three times more predictive of purchase intent than value perceptions — contradicting the intuition that strawberry buying is commodity-driven.",
+    "No significant demographic variation exists on Acme's core metrics (awareness, purchase, intent) across age, gender, or region. Given that age and income typically segment fresh food brand preferences, this uniformity is notable. One explanation is that the sample — screened for past-6-month strawberry purchasers — is itself a self-selected quality-conscious group that is relatively homogeneous in brand orientation.",
+    "Overall NPS remains deeply negative (approximately -35) despite the dramatic wave-over-wave improvement. The improvement is real and statistically significant (chi2=130.976), but the brand still has more critics than advocates among all respondents. This is a caution against over-reading the 2026 gains as a resolved brand health situation.",
+    "Category purchase frequency (Q7) shows no significant year-over-year change (p=0.143), confirming that the overall fresh strawberry market is not growing — Acme's gains are being taken from competitors, not from expanding the category."
+  ],
+  "suggested_narrative": "Acme Strawberries delivered a broad-based, commercially meaningful brand health improvement in Q1 2026, with gains in aided awareness, unaided recall, purchase rate, purchase frequency, quality and freshness perception, and NPS — all simultaneously and all statistically significant. These gains appear to be coming directly at Crimson Crown Berries' expense, as the brands' purchase and preference trends moved in near-mirror opposition. However, the brand is mid-journey, not at the destination: NPS remains negative (-35), purchase intent is still predominantly neutral (58.25% chose the midpoint), and fewer than 40% of respondents hold clearly positive beliefs about Acme's quality or freshness — meaning the large middle of undecided consumers represents the primary conversion opportunity for the next wave."
+}

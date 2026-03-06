@@ -1,0 +1,12 @@
+attribute,attribute_label,pearson_r,p_value,standardized_beta,abs_r,rank
+Q5_01_quality_overall,High quality overall,0.4379,0.0,0.3358,0.4379,1
+Q5_02_freshness,Taste fresh,0.3857,0.0,0.3003,0.3857,2
+Q5_03_sweetness_flavor,Excellent sweetness/flavor,0.2886,0.0,0.2159,0.2886,3
+Q5_10_trust,Brand I trust,0.2144,0.0,0.1361,0.2144,4
+Q5_05_value_for_price,Good value for price,0.1552,1e-05,0.1208,0.1552,5
+Q5_06_consistency,Consistently good,0.1523,1.5e-05,0.0638,0.1523,6
+Q5_04_appearance,Appealing appearance,0.1455,3.6e-05,0.0575,0.1455,7
+Q5_11_shelf_life,Longer shelf life,0.1044,0.003126,0.0744,0.1044,8
+Q5_09_packaging,Attractive packaging,0.0796,0.024351,0.0485,0.0796,9
+Q5_08_sustainability,Committed to sustainability,0.0702,0.047079,0.0416,0.0702,10
+Q5_07_availability,Widely available,0.0672,0.057554,-0.0003,0.0672,11

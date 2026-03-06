@@ -1,0 +1,729 @@
+{
+  "survey_context": {
+    "title": "ACME Strawberries Brand Health Tracking Survey — Q1 2026 Wave",
+    "objectives": "This brand health tracking study measures brand awareness, perceptions, purchase behavior, and competitive position for Acme Strawberries against six competitor brands (Crimson Crown Berries, Sunrise Berries, Red Valley Organics, FreshPick Strawberries, Golden Meadow Berries, Harvest Hill Berries) in the fresh strawberry market.",
+    "methodology_summary": "Two-wave cross-sectional tracking survey (2025 and 2026). Statistical analysis includes frequency distributions, chi-square tests of independence for demographic cross-tabulations, and multiple regression-based derived importance analysis (Pearson r and standardized beta coefficients) correlating Q5 brand attribute ratings with Q6 purchase intent. 191 chi-square tests were conducted across 5 demographic variables and all question columns.",
+    "sample_size": { "original": 800, "cleaned": 800 },
+    "data_collection": "N=800 respondents screened for fresh strawberry purchasers in the past 6 months. Split evenly across two waves: 400 respondents in 2025, 400 respondents in 2026.",
+    "analysis_date": "2026-03-05"
+  },
+  "respondent_profile": [
+    {
+      "demographic": "year",
+      "breakdown": [
+        { "category": "2025", "count": 400, "percent": 50.0 },
+        { "category": "2026", "count": 400, "percent": 50.0 }
+      ],
+      "notes": "Survey waves are equal in size by design. All year-over-year comparisons use 400 respondents per wave as the denominator."
+    },
+    {
+      "demographic": "Q14_age",
+      "breakdown": [
+        { "category": "18-34 (combined 18-24 and 25-34)", "count": null, "percent": null },
+        { "category": "35-54 (combined 35-44 and 45-54)", "count": null, "percent": null },
+        { "category": "55+ (combined 55-64 and 65 or older)", "count": null, "percent": null }
+      ],
+      "notes": "Detailed age frequency table not available as a standalone file. Age was collapsed into three bands (18-34, 35-54, 55+) for cross-tabulation. No statistically significant age effects were found on core brand metrics (awareness, purchase, brand evaluation). One borderline exception: age x Harvest Hill Berries aided awareness (p=0.041, min expected freq borderline) and age x sustainability (p=0.039)."
+    },
+    {
+      "demographic": "Q15_gender",
+      "breakdown": [
+        { "category": "Male / Female / Non-binary / Other / Prefer not to say", "count": null, "percent": null }
+      ],
+      "notes": "Detailed gender frequency table not available as a standalone file. Gender collapsed to Male/Female/Other for cross-tabulation. No statistically significant gender effects found on awareness, purchase, or brand evaluation metrics, except a borderline result for gender x shelf life (p=0.034, expected frequency warning: min=0.73, result may be unreliable)."
+    },
+    {
+      "demographic": "Q16_state",
+      "breakdown": [
+        { "category": "Northeast/Midwest", "count": null, "percent": null },
+        { "category": "South", "count": null, "percent": null },
+        { "category": "West", "count": null, "percent": null }
+      ],
+      "notes": "States collapsed into three regional groupings for cross-tabulation. Zero statistically significant regional differences found across all 19 regional cross-tabs tested (all p > 0.05). Acme's performance is truly geographically broad-based."
+    },
+    {
+      "demographic": "Q17_income",
+      "breakdown": [
+        { "category": "$100K+", "count": 297, "percent": 37.13 },
+        { "category": "$50K-$99K", "count": 310, "percent": 38.75 },
+        { "category": "Under $50K", "count": 193, "percent": 24.13 }
+      ],
+      "notes": "Income group sizes derived from banner_Q17_income_Q5_01_quality_overall.csv column totals (297 + 310 + 193 = 800). Two significant income cross-tabs found: income x quality overall (p=0.016, with expected frequency warning) and income x category purchase frequency (p=0.025)."
+    },
+    {
+      "demographic": "Q3_aided_Acme_Strawberries (combined waves)",
+      "breakdown": [
+        { "category": "Recognized (aided aware)", "count": 591, "percent": 73.88 },
+        { "category": "Not recognized", "count": 209, "percent": 26.12 }
+      ],
+      "notes": "Overall aided awareness across both waves combined. 2025 wave: 261/400 = 65.25%; 2026 wave: 330/400 = 82.5%. Source: freq_Q3_aided_Acme_Strawberries.csv and banner_year_Q3_aided_Acme_Strawberries.csv."
+    },
+    {
+      "demographic": "Q11_brand_preference (combined waves)",
+      "breakdown": [
+        { "category": "Crimson Crown Berries", "count": 206, "percent": 27.32 },
+        { "category": "Acme Strawberries", "count": 191, "percent": 25.33 },
+        { "category": "Sunrise Berries", "count": 115, "percent": 15.25 },
+        { "category": "Red Valley Organics", "count": 93, "percent": 12.33 },
+        { "category": "FreshPick Strawberries", "count": 77, "percent": 10.21 },
+        { "category": "Golden Meadow Berries", "count": 50, "percent": 6.63 },
+        { "category": "Harvest Hill Berries", "count": 22, "percent": 2.92 }
+      ],
+      "notes": "Valid n=754 (46 respondents did not answer Q11). Combined wave view. Per-wave breakdown: Acme 2025=15.95% (59/370), 2026=34.38% (132/384); Crimson Crown 2025=30.81% (114/370), 2026=23.96% (92/384). Source: freq_Q11_brand_preference.csv."
+    },
+    {
+      "demographic": "Q6_purchase_intent (combined waves)",
+      "breakdown": [
+        { "category": "1 - Definitely will not purchase", "count": 1, "percent": 0.12 },
+        { "category": "2 - Probably will not purchase", "count": 103, "percent": 12.88 },
+        { "category": "3 - Neutral", "count": 466, "percent": 58.25 },
+        { "category": "4 - Probably will purchase", "count": 223, "percent": 27.88 },
+        { "category": "5 - Definitely will purchase", "count": 7, "percent": 0.88 }
+      ],
+      "notes": "Combined wave view. Positive intent (scores 4+5) = 28.75%; negative intent (scores 1+2) = 13.0%; neutral = 58.25%. Per-wave positive: 2025=16.75%, 2026=40.75%. Source: freq_Q6_purchase_intent.csv."
+    }
+  ],
+  "themes": [
+    {
+      "theme_name": "Acme Strawberries Is on a Steep Upward Trajectory",
+      "theme_summary": "Acme Strawberries achieved significant year-over-year gains in both unaided and aided brand awareness between 2025 and 2026. These awareness gains directly converted into commercial outcomes: purchase rates and brand preference rose in lockstep, signaling that awareness growth is commercially meaningful rather than superficial recognition.",
+      "key_insight": "Acme's aided awareness surged 17.25 percentage points year-over-year and its purchase rate jumped 13.5 points, with brand preference flipping from second to first place.",
+      "findings": [
+        {
+          "finding": "Aided brand awareness for Acme grew from 65.25% in 2025 to 82.5% in 2026, a gain of 17.25 percentage points, while purchase rate rose from 28.5% to 42.0% (+13.5 pp) and brand preference rose from 15.95% to 34.38% — surpassing Crimson Crown to become the top preferred brand.",
+          "evidence": {
+            "statistic": "Aided awareness: 2025=65.25% (261/400), 2026=82.5% (330/400). Purchase rate: 2025=28.5% (114/400), 2026=42.0% (168/400). Brand preference: 2025=15.95% (59/370), 2026=34.38% (132/384).",
+            "source_file": "banner_year_Q3_aided_Acme_Strawberries.csv; banner_year_Q4_purchased_Acme_Strawberries.csv; banner_year_Q11_brand_preference.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "All three metrics improved significantly from 2025 to 2026: aided awareness (chi2=29.95, p<0.001), purchase rate (chi2=15.38, p<0.001), and brand preference (chi2=34.37, p<0.001).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "Unaided brand recall for Acme also grew significantly year over year, from 30.75% in 2025 to 41.75% in 2026 — an 11 percentage point gain — indicating the brand is becoming more top-of-mind, not merely recognized when prompted.",
+          "evidence": {
+            "statistic": "Unaided awareness: 2025=30.75% (123/400), 2026=41.75% (167/400). Chi2=10.0014, p=0.001564.",
+            "source_file": "banner_year_Q1Q2_unaided_Acme_Strawberries.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.001564,
+            "direction": "Unaided recall increased 11 pp from 2025 to 2026, significant at p<0.01.",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "Q11 brand preference valid n=754 (not 800), as 46 respondents did not answer. Per-wave denominators (370 and 384) correctly reflect valid Q11 respondents. The causal mechanisms for unaided recall growth (earned media, word-of-mouth, distribution) are interpretive extrapolations not provable from this data; they represent typical signals rather than confirmed causes."
+    },
+    {
+      "theme_name": "Perception Improvements Are Concentrated in Acme's Most Commercially Valuable Attributes",
+      "theme_summary": "The brand attributes that improved most sharply year-over-year are precisely the ones with the strongest links to purchase intent. Quality overall (the top purchase intent driver) more than doubled on top-2-box agreement, freshness (second driver) nearly doubled, and consistency and trust (fourth and sixth drivers) also improved significantly. This pattern suggests Acme's brand improvements are commercially meaningful rather than a superficial awareness halo.",
+      "key_insight": "Acme's sharpest perceptual gains occurred on the attributes that matter most to purchase intent — quality, freshness, consistency, and trust — all improving significantly year-over-year.",
+      "findings": [
+        {
+          "finding": "Overall quality perception (the single strongest purchase intent driver, r=0.4379, beta=0.3358) more than doubled on top-2-box agreement: from 25.75% in 2025 to 52.5% in 2026, a gain of 26.75 percentage points. Strongly agree scores rose from 4.25% to 17.5%.",
+          "evidence": {
+            "statistic": "Quality top-2-box: 2025=25.75% (103/400: scores 4+5=86+17), 2026=52.5% (210/400: scores 4+5=140+70). Chi2=76.6107, p<0.001.",
+            "source_file": "banner_year_Q5_01_quality_overall.csv; derived_importance.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Quality top-2-box more than doubled (25.75% to 52.5%) from 2025 to 2026, highly significant (chi2=76.61).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "Freshness perception (the second most important purchase intent driver, r=0.3857, beta=0.3003) improved nearly as dramatically, with top-2-box nearly doubling from 29.25% in 2025 to 50.25% in 2026, a gain of 21 percentage points.",
+          "evidence": {
+            "statistic": "Freshness top-2-box: 2025=29.25% (117/400: scores 4+5=103+14), 2026=50.25% (201/400: scores 4+5=154+47). Chi2=45.9468, p<0.001.",
+            "source_file": "banner_year_Q5_02_freshness.csv; derived_importance.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Freshness top-2-box rose 21 pp from 2025 to 2026, highly significant (chi2=45.95).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "Consistency (ranked 6th in purchase intent importance: r=0.1523, beta=0.0638) improved significantly year over year, with top-2-box rising from 17.5% in 2025 to 37.25% in 2026 (chi2=52.62, p<0.001). Trust (ranked 4th: r=0.2144, beta=0.1361) also improved, rising from 21.25% to 31.0% (chi2=26.50, p<0.001). These improvements indicate Acme's gains are broad-based rather than a narrowly perceived 'new and improved' halo.",
+          "evidence": {
+            "statistic": "Consistency top-2-box: 2025=17.5%, 2026=37.25% (chi2=52.62, p<0.001). Trust top-2-box: 2025=21.25% (74+11=85/400), 2026=31.0% (93+31=124/400) (chi2=26.50, p<0.001).",
+            "source_file": "significance_results.csv; derived_importance.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Both consistency (chi2=52.62) and trust (chi2=26.50) improved significantly from 2025 to 2026.",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "The trust top-2-box figures (2025=21.25%, 2026=31.0%) are confirmed by an arithmetic cross-check: the overall frequency table mean for trust scores 4+5 averages to 26.125%, consistent with (85+124)/800=26.125%. Consistency figures similarly pass the two-wave average check. All stats confirmed against significance_results.csv."
+    },
+    {
+      "theme_name": "Purchase Intent and Advocacy Have Shifted Materially Upward",
+      "theme_summary": "Purchase intent shifted substantially from neutral to positive territory in 2026, with the proportion indicating probable or definite future purchase nearly tripling. NPS also improved dramatically, with high scores (8-10) heavily concentrated in 2026 and low scores (0-5) skewed to 2025. However, overall NPS remains deeply negative (-35) and a large neutral segment persists across both waves, representing a significant unconverted opportunity.",
+      "key_insight": "Purchase intent positive scores nearly tripled year-over-year (16.75% to 40.75%), and NPS distribution shifted meaningfully toward promoter territory — yet overall NPS remains at -35, confirming mid-journey brand status.",
+      "findings": [
+        {
+          "finding": "Purchase intent shifted substantially from neutral to positive territory in 2026. Combined positive intent (scores 4+5) nearly tripled from 16.75% in 2025 to 40.75% in 2026, while combined negative intent (scores 1+2) fell from 20.0% to 6.0%. The neutral segment (score 3) declined from 63.25% to 53.25%, indicating genuine conversion rather than a simple scale of polarity.",
+          "evidence": {
+            "statistic": "Positive intent 2025: (67+0)/400=16.75%; 2026: (156+7)/400=40.75%. Negative intent 2025: (1+79)/400=20.0%; 2026: (0+24)/400=6.0%. Neutral 2025: 253/400=63.25%; 2026: 213/400=53.25%. Chi2=76.3226, p<0.001.",
+            "source_file": "banner_year_Q6_purchase_intent.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "Purchase intent shifted from predominantly negative/neutral to predominantly neutral/positive from 2025 to 2026 (chi2=76.32).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "NPS improved dramatically from 2025 to 2026. High NPS scores are heavily concentrated in 2026: score 10 respondents are 81.82% from 2026 (54/66); score 8 respondents are 74.07% from 2026 (80/108). Low NPS scores are heavily 2025-skewed: score 2 respondents are 79.41% from 2025 (27/34). Overall NPS remains deeply negative: Promoters (scores 9-10) = 18.625% (149/800), Detractors (scores 0-6) = 53.75% (430/800), NPS = -35.",
+          "evidence": {
+            "statistic": "Promoters: (83+66)/800=18.625%. Detractors: (7+23+34+52+100+111+103)/800=53.75%. NPS=-35.125. Chi2=130.976, p<0.001.",
+            "source_file": "banner_year_Q10_nps.csv; freq_Q10_nps.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.0,
+            "direction": "NPS score distribution shifted strongly toward higher scores in 2026 (chi2=130.976, the single largest chi-square in the study).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "significance_results.csv flags an expected frequency warning for Q6 x year (min_expected_freq=0.5 < 5, driven by the extreme rarity of score 1, n=1 total). The practical conclusion is unaffected given the magnitude of the shift (chi2=76.3). Similarly, Q10 NPS x year has an expected frequency warning (min=3.5 < 5), expected given 11 scale points across 2 waves. At chi2=130.976, the result remains overwhelming. These warnings were not flagged by the Explorer and should be disclosed."
+    },
+    {
+      "theme_name": "Acme Is Gaining Ground on Its Primary Competitor, Crimson Crown Berries",
+      "theme_summary": "Crimson Crown Berries — Acme's closest competitor by both aided awareness and purchase rate — lost purchase share in 2026 exactly as Acme gained it. Acme's purchase frequency among its own buyers also deepened materially, with the weekly-or-more buyer segment tripling. These patterns together are consistent with Acme recruiting buyers from the category leader while also building loyalty depth.",
+      "key_insight": "As Acme gained 13.5 pp in purchase rate (28.5% to 42.0%), Crimson Crown lost 13.0 pp (48.75% to 35.75%), and Acme's weekly buyers tripled from 3.0% to 9.75% — signaling both competitive switching and deepening loyalty.",
+      "findings": [
+        {
+          "finding": "Crimson Crown Berries lost purchase share in 2026 exactly as Acme gained it: Crimson Crown fell from 48.75% (195/400) to 35.75% (143/400), a decline of 13 pp, while Acme rose 13.5 pp to 42.0%. In brand preference, Acme rose from 15.95% to 34.38%, surpassing Crimson Crown which fell from 30.81% to 23.96%.",
+          "evidence": {
+            "statistic": "Crimson Crown purchase: 2025=48.75% (195/400), 2026=35.75% (143/400), chi2=13.3251, p=0.000262. Acme purchase: 2025=28.5%, 2026=42.0%. Brand preference: Acme 2025=15.95%, 2026=34.38%; Crimson Crown 2025=30.81%, 2026=23.96%.",
+            "source_file": "banner_year_Q4_purchased_Crimson_Crown_Berries.csv; banner_year_Q4_purchased_Acme_Strawberries.csv; banner_year_Q11_brand_preference.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.000262,
+            "direction": "Crimson Crown purchase rate fell significantly from 2025 to 2026 (chi2=13.33, p<0.001), mirroring Acme's rise.",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "Acme's purchase frequency among all respondents increased in 2026, with the weekly-or-more buyer segment tripling from 3.0% (12/400) to 9.75% (39/400). Combined high-frequency (often + very often) rose from 9.75% to 22.5%. Category purchase frequency showed no significant year-over-year change (p=0.143), supporting a share-of-wallet interpretation: Acme is earning more of the same category spend.",
+          "evidence": {
+            "statistic": "Weekly+ buyers: 2025=3.0% (12/400), 2026=9.75% (39/400). Often+: 2025=9.75% (39/400), 2026=22.5% (90/400). Chi2=29.6579, p=0.000006. Category frequency chi2=6.8693, p=0.142958 (not significant).",
+            "source_file": "banner_year_Q8_acme_frequency.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "year",
+            "p_value": 0.000006,
+            "direction": "Acme purchase frequency increased significantly from 2025 to 2026 (chi2=29.66) while overall category frequency did not change significantly (p=0.143).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "The causal inference that Acme is recruiting buyers from Crimson Crown is plausible given the mirror-image purchase rate changes, but cannot be definitively proven from cross-sectional wave data. A panel design tracking individual respondents across waves would be required to confirm individual switching behavior."
+    },
+    {
+      "theme_name": "Current Brand Health Scores Remain Below Aspirational Benchmarks Despite Progress",
+      "theme_summary": "Despite significant year-over-year improvements, Acme's absolute brand health scores remain centered at the neutral midpoint on Likert scales, with majority-neutral modal responses across all evaluated attributes. Purchase intent remains predominantly neutral and overall NPS is deeply negative, indicating the brand is mid-journey rather than at a destination of strength.",
+      "key_insight": "The modal response on every key brand attribute is neutral (score 3), 58.25% of all respondents chose the purchase intent midpoint, and NPS is -35 — confirming a large unconverted middle segment that represents Acme's primary growth opportunity.",
+      "findings": [
+        {
+          "finding": "Despite year-over-year progress, Acme's absolute ratings on key quality attributes remain centered at neutral (scale midpoint 3). Overall quality (combined waves) has a modal response of 3 with 41.25% of all respondents (330/800); top-2-box (scores 4+5) = 39.125% (313/800). Freshness: modal=3 (319/800, 39.88%); top-2-box=39.75% (318/800). Trust: modal=3 (391/800, 48.88%); top-2-box=26.125% (209/800).",
+          "evidence": {
+            "statistic": "Quality: modal=3, count=330/800 (41.25%), top-2-box=313/800 (39.125%). Freshness: modal=3, count=319/800 (39.88%), top-2-box=318/800 (39.75%). Trust: modal=3, count=391/800 (48.88%), top-2-box=209/800 (26.125%).",
+            "source_file": "freq_Q5_01_quality_overall.csv; freq_Q5_02_freshness.csv; freq_Q5_10_trust.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": null,
+            "verified": true
+          }
+        },
+        {
+          "finding": "Purchase intent remains predominantly neutral across both waves combined: 58.25% (466/800) chose the midpoint (score 3), and only 28.75% (230/800) indicated probable or definite purchase (scores 4+5). A negative NPS of -35 (promoters 18.625% minus detractors 53.75%) confirms the brand is not yet generating advocacy at scale.",
+          "evidence": {
+            "statistic": "Neutral intent (score 3): 466/800=58.25%. Positive intent (scores 4+5): 223+7=230/800=28.75%. NPS: Promoters=18.625% (149/800), Detractors=53.75% (430/800), NPS=-35.125.",
+            "source_file": "freq_Q6_purchase_intent.csv; freq_Q10_nps.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": null,
+            "p_value": null,
+            "direction": null,
+            "source_file": null,
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "The freshness top-2-box figure is 39.75% (not 39.74% as the Explorer stated — rounding artifact). The purchase intent positive proportion is 28.75% (not 28.76%). NPS promoter rate is 18.625% (not 18.63%). All are trivial rounding differences with no analytical consequence."
+    },
+    {
+      "theme_name": "Demographic Variation Is Narrow — Acme's Performance Is Broad-Based",
+      "theme_summary": "Age, gender, and region produce almost no statistically significant differences in brand awareness, purchase behavior, or brand evaluation for Acme. Of 191 total significance tests conducted, only 26 were significant at p<0.05, and the majority of those reflect wave (year) effects rather than demographic differences. This broad-based performance pattern suggests Acme's growth is not driven by a narrow demographic segment.",
+      "key_insight": "Only 26 of 191 chi-square tests reached significance at p<0.05, and region produced zero significant results, confirming Acme's momentum is demographically broad-based.",
+      "findings": [
+        {
+          "finding": "Age, gender, and region produce almost no statistically significant differences in brand awareness, purchase behavior, or brand evaluation. The year (wave) variable alone accounts for 19 tests. Of all 191 tests, 26 are significant at p<0.05. Significant demographic results include: age x Harvest Hill Berries aided awareness (p=0.041), age x sustainability (p=0.039), and gender x shelf life (p=0.034). Region (Q16_state) produced zero significant results across all 19 tests.",
+          "evidence": {
+            "statistic": "191 total chi-square tests; 26 significant at p<0.05. Year variable: 19 tests, majority significant. Region: 0 significant. Age significant: 2 tests. Gender significant: 1 test (shelf life). Income significant: 2 tests (quality p=0.016, category frequency p=0.025).",
+            "source_file": "significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "Multiple",
+            "p_value": null,
+            "direction": "Virtually no age, gender, or regional differences in core brand metrics.",
+            "source_file": "significance_results.csv",
+            "verified": true
+          }
+        },
+        {
+          "finding": "Higher-income households ($100K+) show lower 'Strongly agree' rates on overall quality than mid- and lower-income groups. Within-group Strongly agree rates: $100K+=7.41% (22/297), $50K-$99K=12.90% (40/310), Under $50K=12.95% (25/193). The overall quality distribution difference by income is statistically significant (chi2=18.845, p=0.016), but this result should be treated cautiously as expected cell frequencies fall below 5 in some cells (min=3.14).",
+          "evidence": {
+            "statistic": "Within-group Strongly agree (score 5): $100K+=22/297=7.41%, $50K-$99K=40/310=12.90%, Under $50K=25/193=12.95%. Chi2=18.845, p=0.015711, min_expected_freq=3.14 (assumption warning).",
+            "source_file": "banner_Q17_income_Q5_01_quality_overall.csv; significance_results.csv",
+            "verified": true
+          },
+          "cross_tab_significance": {
+            "demographic": "Q17_income",
+            "p_value": 0.015711,
+            "direction": "$100K+ households rate Acme's quality lower (7.41% Strongly agree) vs $50K-$99K (12.90%) and Under $50K (12.95%). Non-linear pattern with mid- and lower-income groups performing similarly.",
+            "source_file": "significance_results.csv; banner_Q17_income_Q5_01_quality_overall.csv",
+            "verified": true
+          }
+        }
+      ],
+      "challenger_notes": "The Explorer originally reported this income-quality cross-tab using row percentages (share of all score-5 respondents from each income group: $100K+=25.29%, $50K-$99K=45.98%, Under $50K=28.74%) rather than within-group rates. This is a methodological framing error. The Challenger's corrected within-group rates are used here. The directional finding ($100K+ has lower Strongly agree rates) is preserved but the magnitude is considerably smaller. The chi-square expected frequency warning (min=3.14 < 5) means the p-value may be unreliable. The gender x shelf life significance (p=0.034) also carries an expected frequency warning (min=0.73 < 5) and may be unreliable. The age x sustainability result (p=0.039) has borderline expected frequency (min=5.73)."
+    }
+  ],
+  "purchase_intent_drivers": {
+    "section_title": "Key Drivers of Purchase Intent: Derived Importance Analysis",
+    "methodology": "Pearson correlation (r) and standardized regression beta coefficients were computed between each Q5 brand attribute rating and Q6 purchase intent score across all 800 respondents. Rankings are based on absolute Pearson r (overall importance). Standardized betas reflect unique contribution after accounting for other attributes.",
+    "drivers": [
+      {
+        "rank": 1,
+        "attribute": "Q5_01_quality_overall",
+        "attribute_label": "High quality overall",
+        "pearson_r": 0.4379,
+        "p_value": 0.0,
+        "standardized_beta": 0.3358,
+        "interpretation": "The strongest driver of purchase intent by both overall correlation and unique contribution. Both metrics align, indicating this attribute is important and not rendered redundant by other attributes in the model."
+      },
+      {
+        "rank": 2,
+        "attribute": "Q5_02_freshness",
+        "attribute_label": "Taste fresh",
+        "pearson_r": 0.3857,
+        "p_value": 0.0,
+        "standardized_beta": 0.3003,
+        "interpretation": "Second strongest driver on both metrics, closely following quality overall. The two attributes likely share variance given their sensory overlap."
+      },
+      {
+        "rank": 3,
+        "attribute": "Q5_03_sweetness_flavor",
+        "attribute_label": "Excellent sweetness/flavor",
+        "pearson_r": 0.2886,
+        "p_value": 0.0,
+        "standardized_beta": 0.2159,
+        "interpretation": "Third ranked sensory attribute. Completes the top-3 cluster of sensory quality drivers, with a substantial gap between this beta (0.2159) and the fourth-ranked attribute's beta (0.1361)."
+      },
+      {
+        "rank": 4,
+        "attribute": "Q5_10_trust",
+        "attribute_label": "Brand I trust",
+        "pearson_r": 0.2144,
+        "p_value": 0.0,
+        "standardized_beta": 0.1361,
+        "interpretation": "Fourth ranked overall but shows disproportionately high unique contribution (beta=0.1361) relative to its bivariate correlation (r=0.2144), suggesting it has independent explanatory power beyond what sensory attributes capture."
+      },
+      {
+        "rank": 5,
+        "attribute": "Q5_05_value_for_price",
+        "attribute_label": "Good value for price",
+        "pearson_r": 0.1552,
+        "p_value": 0.00001,
+        "standardized_beta": 0.1208,
+        "interpretation": "Fifth ranked. Moderate contribution, suggesting value perception matters but is secondary to sensory quality."
+      },
+      {
+        "rank": 6,
+        "attribute": "Q5_06_consistency",
+        "attribute_label": "Consistently good",
+        "pearson_r": 0.1523,
+        "p_value": 0.000015,
+        "standardized_beta": 0.0638,
+        "interpretation": "Sixth ranked. Bivariate correlation (0.1523) is similar to trust but beta (0.0638) is much lower, suggesting consistency's predictive value is largely shared with other attributes."
+      },
+      {
+        "rank": 7,
+        "attribute": "Q5_04_appearance",
+        "attribute_label": "Appealing appearance",
+        "pearson_r": 0.1455,
+        "p_value": 0.000036,
+        "standardized_beta": 0.0575,
+        "interpretation": "Seventh ranked. Minor unique contribution."
+      },
+      {
+        "rank": 8,
+        "attribute": "Q5_11_shelf_life",
+        "attribute_label": "Longer shelf life than competitors",
+        "pearson_r": 0.1044,
+        "p_value": 0.003126,
+        "standardized_beta": 0.0744,
+        "interpretation": "Eighth ranked by bivariate r but has a slightly higher beta (0.0744) than appearance and consistency, suggesting modest independent predictive value."
+      },
+      {
+        "rank": 9,
+        "attribute": "Q5_09_packaging",
+        "attribute_label": "Attractive packaging",
+        "pearson_r": 0.0796,
+        "p_value": 0.024351,
+        "standardized_beta": 0.0485,
+        "interpretation": "Ninth ranked. Weak but statistically significant bivariate correlation; minimal unique contribution."
+      },
+      {
+        "rank": 10,
+        "attribute": "Q5_08_sustainability",
+        "attribute_label": "Committed to sustainability",
+        "pearson_r": 0.0702,
+        "p_value": 0.047079,
+        "standardized_beta": 0.0416,
+        "interpretation": "Tenth ranked. Borderline significant at p=0.047. Minimal unique contribution."
+      },
+      {
+        "rank": 11,
+        "attribute": "Q5_07_availability",
+        "attribute_label": "Widely available",
+        "pearson_r": 0.0672,
+        "p_value": 0.057554,
+        "standardized_beta": -0.0003,
+        "interpretation": "Lowest ranked. Not statistically significant at p=0.05. Near-zero and negative beta after controlling for other attributes, indicating availability has effectively zero unique contribution to purchase intent. This is likely due to a screened sample of existing category purchasers for whom availability is not the binding constraint."
+      }
+    ],
+    "key_finding": "Three sensory quality attributes — High quality overall, Taste fresh, and Excellent sweetness/flavor — dominate the top three positions by both correlation and unique contribution, with substantial gaps separating them from functional attributes. Trust holds a disproportionately high unique beta relative to its bivariate correlation, suggesting it is an independent (non-redundant) driver. Wide availability is effectively irrelevant to purchase intent within this screened sample.",
+    "source_file": "derived_importance.csv",
+    "caveats": "The three top sensory attributes are likely intercorrelated, which can cause instability in individual beta estimates due to multicollinearity. The directional recommendation (invest in sensory quality signals) is robust, but precise beta values should be interpreted with caution. The analysis is correlational; causality cannot be established. Availability finding is specific to existing category purchasers and may not generalize to non-purchasers."
+  },
+  "significant_cross_tabs_summary": [
+    {
+      "demographic": "year",
+      "question": "Q1Q2_unaided_Acme_Strawberries",
+      "chi2": 10.0014,
+      "p_value": 0.001564,
+      "direction": "Unaided Acme recall significantly higher in 2026 (41.75%) than 2025 (30.75%)",
+      "effect_description": "11 pp year-over-year increase in top-of-mind awareness"
+    },
+    {
+      "demographic": "year",
+      "question": "Q1Q2_unaided_Crimson_Crown_Berries",
+      "chi2": 10.7276,
+      "p_value": 0.001055,
+      "direction": "Unaided Crimson Crown recall significantly lower in 2026",
+      "effect_description": "Competitive erosion of Crimson Crown unaided recall concurrent with Acme gains"
+    },
+    {
+      "demographic": "year",
+      "question": "Q1Q2_unaided_Sunrise_Berries",
+      "chi2": 6.4772,
+      "p_value": 0.010927,
+      "direction": "Unaided Sunrise Berries recall significantly changed year-over-year",
+      "effect_description": "Moderate effect, specific direction requires banner table review"
+    },
+    {
+      "demographic": "year",
+      "question": "Q1Q2_unaided_FreshPick_Strawberries",
+      "chi2": 6.1275,
+      "p_value": 0.01331,
+      "direction": "Unaided FreshPick recall significantly changed year-over-year",
+      "effect_description": "Moderate effect"
+    },
+    {
+      "demographic": "year",
+      "question": "Q3_aided_Acme_Strawberries",
+      "chi2": 29.9484,
+      "p_value": 0.0,
+      "direction": "Aided Acme awareness significantly higher in 2026 (82.5%) than 2025 (65.25%)",
+      "effect_description": "17.25 pp year-over-year gain, the largest absolute awareness shift in the study"
+    },
+    {
+      "demographic": "year",
+      "question": "Q3_aided_Crimson_Crown_Berries",
+      "chi2": 10.2784,
+      "p_value": 0.001346,
+      "direction": "Aided Crimson Crown awareness significantly changed year-over-year",
+      "effect_description": "Competitive shift concurrent with Acme gains"
+    },
+    {
+      "demographic": "year",
+      "question": "Q4_purchased_Acme_Strawberries",
+      "chi2": 15.3838,
+      "p_value": 0.000088,
+      "direction": "Acme purchase rate significantly higher in 2026 (42.0%) than 2025 (28.5%)",
+      "effect_description": "13.5 pp year-over-year gain in purchase incidence"
+    },
+    {
+      "demographic": "year",
+      "question": "Q4_purchased_Crimson_Crown_Berries",
+      "chi2": 13.3251,
+      "p_value": 0.000262,
+      "direction": "Crimson Crown purchase rate significantly lower in 2026 (35.75%) than 2025 (48.75%)",
+      "effect_description": "13 pp year-over-year decline mirrors Acme's gain"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_01_quality_overall",
+      "chi2": 76.6107,
+      "p_value": 0.0,
+      "direction": "Quality perception significantly higher in 2026; top-2-box doubled from 25.75% to 52.5%",
+      "effect_description": "Largest absolute quality shift; 26.75 pp gain on the top purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_02_freshness",
+      "chi2": 45.9468,
+      "p_value": 0.0,
+      "direction": "Freshness perception significantly higher in 2026; top-2-box rose from 29.25% to 50.25%",
+      "effect_description": "21 pp gain on the second most important purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_03_sweetness_flavor",
+      "chi2": 35.8658,
+      "p_value": 0.0,
+      "direction": "Sweetness/flavor perception significantly higher in 2026",
+      "effect_description": "Improvement on the third most important purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_04_appearance",
+      "chi2": 11.2118,
+      "p_value": 0.024284,
+      "direction": "Appearance perception significantly higher in 2026",
+      "effect_description": "Moderate effect on lower-ranked purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_06_consistency",
+      "chi2": 52.6183,
+      "p_value": 0.0,
+      "direction": "Consistency perception significantly higher in 2026; top-2-box rose from 17.5% to 37.25%",
+      "effect_description": "19.75 pp gain on the sixth most important purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_07_availability",
+      "chi2": 28.1548,
+      "p_value": 0.000012,
+      "direction": "Availability perception significantly changed year-over-year",
+      "effect_description": "Significant shift despite availability being the lowest-ranked purchase intent driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_09_packaging",
+      "chi2": 11.1445,
+      "p_value": 0.024987,
+      "direction": "Packaging perception significantly changed year-over-year",
+      "effect_description": "Moderate effect on lower-ranked driver"
+    },
+    {
+      "demographic": "year",
+      "question": "Q5_10_trust",
+      "chi2": 26.4954,
+      "p_value": 0.000025,
+      "direction": "Trust perception significantly higher in 2026; top-2-box rose from 21.25% to 31.0%",
+      "effect_description": "9.75 pp gain on the fourth most important purchase intent driver (with disproportionate unique contribution)"
+    },
+    {
+      "demographic": "year",
+      "question": "Q6_purchase_intent",
+      "chi2": 76.3226,
+      "p_value": 0.0,
+      "direction": "Purchase intent significantly higher in 2026; positive intent (scores 4+5) nearly tripled from 16.75% to 40.75%",
+      "effect_description": "Very large effect; note expected frequency warning (min=0.5) due to near-zero score-1 responses"
+    },
+    {
+      "demographic": "year",
+      "question": "Q8_acme_frequency",
+      "chi2": 29.6579,
+      "p_value": 0.000006,
+      "direction": "Acme purchase frequency significantly higher in 2026; weekly+ buyers tripled from 3.0% to 9.75%",
+      "effect_description": "Deepening loyalty, not just trial expansion"
+    },
+    {
+      "demographic": "year",
+      "question": "Q9_last_brand_purchased",
+      "chi2": 32.3188,
+      "p_value": 0.000035,
+      "direction": "Last brand purchased distribution significantly shifted toward Acme in 2026",
+      "effect_description": "Competitive shift in recency of purchase behavior"
+    },
+    {
+      "demographic": "year",
+      "question": "Q10_nps",
+      "chi2": 130.976,
+      "p_value": 0.0,
+      "direction": "NPS score distribution significantly shifted toward higher scores in 2026",
+      "effect_description": "Largest chi-square in the study; note expected frequency warning (min=3.5)"
+    },
+    {
+      "demographic": "year",
+      "question": "Q11_brand_preference",
+      "chi2": 34.3727,
+      "p_value": 0.000006,
+      "direction": "Brand preference shifted significantly to Acme in 2026; Acme rose from 15.95% to 34.38%, surpassing Crimson Crown",
+      "effect_description": "Market leadership shift in stated preference"
+    },
+    {
+      "demographic": "Q14_age",
+      "question": "Q3_aided_Harvest_Hill_Berries",
+      "chi2": 6.3761,
+      "p_value": 0.041253,
+      "direction": "Harvest Hill aided awareness varies by age group",
+      "effect_description": "Minor competitor metric; limited strategic relevance for Acme"
+    },
+    {
+      "demographic": "Q14_age",
+      "question": "Q5_08_sustainability",
+      "chi2": 16.2589,
+      "p_value": 0.038821,
+      "direction": "Sustainability perception varies by age group",
+      "effect_description": "Borderline significance (min expected freq=5.73); sustainability is the 10th-ranked purchase intent driver"
+    },
+    {
+      "demographic": "Q15_gender",
+      "question": "Q5_11_shelf_life",
+      "chi2": 16.6609,
+      "p_value": 0.033841,
+      "direction": "Shelf life perception varies by gender",
+      "effect_description": "Expected frequency warning (min=0.73 < 5); result may be unreliable. Shelf life is the 8th-ranked purchase intent driver."
+    },
+    {
+      "demographic": "Q17_income",
+      "question": "Q5_01_quality_overall",
+      "chi2": 18.845,
+      "p_value": 0.015711,
+      "direction": "$100K+ households rate Acme quality lower (7.41% Strongly agree) vs mid- and lower-income groups (~12.90-12.95%)",
+      "effect_description": "Expected frequency warning (min=3.14 < 5); treat with caution. Corrected from Explorer's row-percentage framing."
+    },
+    {
+      "demographic": "Q17_income",
+      "question": "Q7_category_frequency",
+      "chi2": 17.5357,
+      "p_value": 0.02499,
+      "direction": "Category purchase frequency varies by income group",
+      "effect_description": "Higher-income groups may purchase fresh strawberries at different frequencies"
+    }
+  ],
+  "conclusions": [
+    {
+      "conclusion": "Acme Strawberries has achieved a meaningful year-over-year brand health inflection, with significant improvements across all primary brand metrics — awareness, purchase, preference, perception, intent, and advocacy — between 2025 and 2026.",
+      "supporting_evidence": [
+        "Aided awareness: +17.25 pp (65.25% to 82.5%)",
+        "Unaided awareness: +11 pp (30.75% to 41.75%)",
+        "Purchase rate: +13.5 pp (28.5% to 42.0%)",
+        "Brand preference: +18.43 pp (15.95% to 34.38%), surpassing Crimson Crown",
+        "Purchase intent positive: +24 pp (16.75% to 40.75%)",
+        "NPS distribution: significantly shifted toward promoter scores"
+      ],
+      "strength": "strong",
+      "recommendation": "Continue and accelerate the marketing and product initiatives that drove the 2025-to-2026 improvement. Identify which specific programs correlate with the timing of gains to inform investment allocation."
+    },
+    {
+      "conclusion": "Acme is gaining share at the direct expense of Crimson Crown Berries, its closest competitor. The mirror-image purchase and preference shifts are consistent with competitive switching, and Acme has taken the brand preference lead for the first time.",
+      "supporting_evidence": [
+        "Crimson Crown purchase rate fell 13 pp (48.75% to 35.75%) as Acme rose 13.5 pp",
+        "Crimson Crown preference fell from 30.81% to 23.96%; Acme preference rose from 15.95% to 34.38%",
+        "Acme's high-frequency (often + very often) buyer segment more than doubled (9.75% to 22.5%)"
+      ],
+      "strength": "moderate",
+      "recommendation": "Develop competitive messaging and retention strategies targeting Crimson Crown's remaining buyer base, emphasizing the sensory quality and freshness attributes where Acme has improved most sharply. Monitor competitor response."
+    },
+    {
+      "conclusion": "Sensory quality — specifically overall quality, freshness, and sweetness/flavor — is the primary driver of purchase intent. Investments that improve or signal sensory quality will have the greatest commercial return. Brand trust has disproportionate independent predictive value and should be treated as a strategic priority beyond its rank suggests.",
+      "supporting_evidence": [
+        "Quality overall: r=0.4379, beta=0.3358 (rank 1)",
+        "Freshness: r=0.3857, beta=0.3003 (rank 2)",
+        "Sweetness/flavor: r=0.2886, beta=0.2159 (rank 3)",
+        "Trust: r=0.2144, beta=0.1361 (rank 4); beta disproportionate relative to r vs consistency (r=0.1523, beta=0.0638)"
+      ],
+      "strength": "moderate",
+      "recommendation": "Prioritize quality and freshness signaling in brand communications. Invest in trust-building activities (e.g., traceability, sourcing transparency) given trust's independent predictive value. Deprioritize availability and packaging messaging as purchase intent drivers for this audience."
+    },
+    {
+      "conclusion": "Despite significant progress, Acme's brand health remains at a 'mid-journey' stage. The majority of respondents are neutral on purchase intent (58.25%), ratings remain centered at the scale midpoint, and NPS is deeply negative (-35). The large neutral segment represents the primary conversion opportunity.",
+      "supporting_evidence": [
+        "Purchase intent neutral (score 3): 58.25% of all respondents",
+        "Combined NPS: Promoters=18.625%, Detractors=53.75%, NPS=-35",
+        "Quality overall top-2-box: 39.125% overall (below 50% threshold for strong brand health)",
+        "Trust top-2-box: 26.125% overall"
+      ],
+      "strength": "strong",
+      "recommendation": "Target the neutral segment (score-3 intent) as the highest-priority conversion audience. Design messaging and trial programs specifically to shift neutrals to probable purchasers, leveraging the sensory quality and freshness improvements already achieved."
+    },
+    {
+      "conclusion": "Acme's performance is demographically broad-based with no meaningful variation by age, gender, or region. This indicates the brand's growth trajectory is not dependent on a narrow segment and provides a stable foundation for continued broad-market investment.",
+      "supporting_evidence": [
+        "Region: 0 of 19 regional tests significant at p<0.05",
+        "Age: only 2 borderline significant results on minor metrics (Harvest Hill competitor awareness, sustainability attribute)",
+        "Gender: only 1 borderline significant result with expected frequency warning (shelf life attribute)",
+        "Income quality result (p=0.016) is the most notable demographic finding, with $100K+ showing slightly lower Strongly agree rates"
+      ],
+      "strength": "moderate",
+      "recommendation": "Maintain broad-based mass-market positioning rather than demographic targeting. The one modest exception — slightly lower quality perceptions among $100K+ households — warrants monitoring but not an immediate strategy pivot given the chi-square assumption warning on that test."
+    }
+  ],
+  "data_limitations": [
+    "Cross-sectional wave design: Year-over-year comparisons use different respondents in each wave, not the same individuals tracked over time. Individual-level switching behavior (e.g., from Crimson Crown to Acme) cannot be confirmed — only aggregate share shifts are observable.",
+    "Chi-square expected frequency warnings: Two key significance tests have expected cell frequencies below 5 — Q6 purchase intent x year (min=0.5, driven by n=1 for score 1) and Q10 NPS x year (min=3.5, due to 11-point scale across 2 waves). Both results are overwhelmingly significant (chi2=76.3 and 130.976 respectively), so the practical conclusions are unaffected, but the precise p-values may be unreliable.",
+    "Income x quality chi-square warning: The Q17_income x Q5_01_quality_overall test has min_expected_freq=3.14 < 5, meaning the p-value (0.016) may be unreliable. The income-quality finding should be treated cautiously.",
+    "Gender x shelf life chi-square warning: min_expected_freq=0.73 < 5; this result (p=0.034) may be unreliable.",
+    "Q11 brand preference missing data: 46 of 800 respondents (5.75%) did not answer Q11, reducing valid n to 754. Per-wave denominators are 370 (2025) and 384 (2026).",
+    "Derived importance multicollinearity: The three top sensory attributes (quality, freshness, sweetness/flavor) are likely intercorrelated. Multicollinearity can inflate or destabilize individual beta estimates. The directional ranking is robust but precise beta values should be interpreted cautiously.",
+    "Derived importance is correlational: The analysis identifies attributes associated with higher purchase intent, not attributes that cause higher purchase intent. The directional recommendations are plausible but not causal.",
+    "Availability finding limited to screened sample: The finding that wide availability is the lowest-ranked driver (effectively zero beta) reflects a sample of existing category purchasers for whom availability is already resolved. This result does not generalize to non-purchasers.",
+    "Demographic frequency tables not available: Standalone frequency tables for Q14_age, Q15_gender, and Q16_state were not produced by the data processor. Exact demographic composition of the sample cannot be reported from available files. Income group totals were derived from banner table column sums.",
+    "Causal mechanisms for awareness growth are unobservable: The reasons for Acme's unaided and aided awareness gains (e.g., earned media, distribution, advertising) cannot be determined from survey data alone."
+  ],
+  "appendix_summary": {
+    "frequency_tables_count": 38,
+    "banner_tables_count": 152,
+    "significant_results_count": 26,
+    "source_directories": {
+      "frequency_tables": "C:/Users/jsand/OneDrive/Desktop/Claude Code Projects/Claude Code Brand Health Survey/workspace/analysis/frequency_tables",
+      "banner_tables": "C:/Users/jsand/OneDrive/Desktop/Claude Code Projects/Claude Code Brand Health Survey/workspace/analysis/banner_tables",
+      "significance_tests": "C:/Users/jsand/OneDrive/Desktop/Claude Code Projects/Claude Code Brand Health Survey/workspace/analysis/significance_tests"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "frequency_tables_count": 38,
+  "frequency_tables_files": [
+    "freq_Q1Q2_unaided_Acme_Strawberries.csv",
+    "freq_Q1Q2_unaided_Crimson_Crown_Berries.csv",
+    "freq_Q1Q2_unaided_Sunrise_Berries.csv",
+    "freq_Q1Q2_unaided_Red_Valley_Organics.csv",
+    "freq_Q1Q2_unaided_FreshPick_Strawberries.csv",
+    "freq_Q1Q2_unaided_Golden_Meadow_Berries.csv",
+    "freq_Q1Q2_unaided_Harvest_Hill_Berries.csv",
+    "freq_Q3_aided_Acme_Strawberries.csv",
+    "freq_Q3_aided_Crimson_Crown_Berries.csv",
+    "freq_Q3_aided_Sunrise_Berries.csv",
+    "freq_Q3_aided_Red_Valley_Organics.csv",
+    "freq_Q3_aided_FreshPick_Strawberries.csv",
+    "freq_Q3_aided_Golden_Meadow_Berries.csv",
+    "freq_Q3_aided_Harvest_Hill_Berries.csv",
+    "freq_Q4_purchased_Acme_Strawberries.csv",
+    "freq_Q4_purchased_Crimson_Crown_Berries.csv",
+    "freq_Q4_purchased_Sunrise_Berries.csv",
+    "freq_Q4_purchased_Red_Valley_Organics.csv",
+    "freq_Q4_purchased_FreshPick_Strawberries.csv",
+    "freq_Q4_purchased_Golden_Meadow_Berries.csv",
+    "freq_Q4_purchased_Harvest_Hill_Berries.csv",
+    "freq_Q5_01_quality_overall.csv",
+    "freq_Q5_02_freshness.csv",
+    "freq_Q5_03_sweetness_flavor.csv",
+    "freq_Q5_04_appearance.csv",
+    "freq_Q5_05_value_for_price.csv",
+    "freq_Q5_06_consistency.csv",
+    "freq_Q5_07_availability.csv",
+    "freq_Q5_08_sustainability.csv",
+    "freq_Q5_09_packaging.csv",
+    "freq_Q5_10_trust.csv",
+    "freq_Q5_11_shelf_life.csv",
+    "freq_Q6_purchase_intent.csv",
+    "freq_Q7_category_frequency.csv",
+    "freq_Q8_acme_frequency.csv",
+    "freq_Q9_last_brand_purchased.csv",
+    "freq_Q10_nps.csv",
+    "freq_Q11_brand_preference.csv"
+  ],
+  "banner_tables_count": 190,
+  "banner_tables_files_note": "5 demographics x 38 questions = 190 files in banner_tables/. Files follow naming convention banner_{demographic}_{question}.csv. Demographics: year, Q14_age (collapsed to 18-34/35-54/55+), Q15_gender, Q16_state (collapsed to Northeast/Midwest/South/West), Q17_income (collapsed to Under $50K/$50K-$99K/$100K+).",
+  "significance_tests_count": 190,
+  "significant_results_count": 26,
+  "highly_significant_count": 17,
+  "derived_importance": {
+    "attributes_analyzed": 11,
+    "valid_n": 800,
+    "top_3_drivers": [
+      "High quality overall (r=0.4379, beta=0.3358)",
+      "Taste fresh (r=0.3857, beta=0.3003)",
+      "Excellent sweetness/flavor (r=0.2886, beta=0.2159)"
+    ]
+  },
+  "skipped_combinations": [],
+  "warnings": [
+    "Q11_brand_preference has 46 missing values (N=754 of 800); frequencies computed on valid responses only."
+  ],
+  "open_ended_columns_skipped": []
+}

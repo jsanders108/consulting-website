@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -p acme_brand_health_survey.docx word/document.xml)",
+      "Bash(sed 's/<[^>]*>//g')"
+    ]
+  }
+}

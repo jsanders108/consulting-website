@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Analysis Report</title>
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       ============================================ */
+    :root {
+      /* Primary */
+      --navy:        #1B2A4A;
+      --navy-light:  #2D4A7A;
+      --slate:       #475569;
+      --slate-light: #94A3B8;
+
+      /* Backgrounds */
+      --white:       #FFFFFF;
+      --gray-50:     #F8FAFC;
+      --gray-100:    #F1F5F9;
+      --gray-200:    #E2E8F0;
+
+      /* Accent */
+      --blue:        #2563EB;
+      --blue-light:  #DBEAFE;
+
+      /* Semantic */
+      --green:       #059669;
+      --amber:       #D97706;
+      --red:         #DC2626;
+
+      /* Spacing */
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+    }
+
+    /* ============================================
+       BASE STYLES
+       ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--slate);
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--white);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 var(--space-xl);
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    h1, h2, h3, h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: 2rem; margin-bottom: var(--space-sm); }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--gray-200);
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-md);
+    }
+
+    p {
+      margin-bottom: var(--space-md);
+    }
+
+    strong {
+      color: var(--navy);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================
+       HEADER
+       ============================================ */
+    .report-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: var(--space-2xl) var(--space-2xl);
+      margin: 0 calc(-1 * var(--space-xl));
+      margin-bottom: var(--space-xl);
+    }
+
+    .report-title {
+      color: var(--white);
+      font-size: 2.25rem;
+      margin-bottom: var(--space-xs);
+    }
+
+    .report-subtitle {
+      color: var(--slate-light);
+      font-size: 1.1rem;
+      font-weight: 400;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .report-date {
+      color: var(--slate-light);
+      font-size: 0.9rem;
+      margin-top: var(--space-sm);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* ============================================
+       TABLE OF CONTENTS
+       ============================================ */
+    .table-of-contents {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 4px;
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .table-of-contents h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--slate-light);
+      margin-top: 0;
+      margin-bottom: var(--space-md);
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .table-of-contents ol {
+      list-style: none;
+      counter-reset: toc;
+      padding-left: 0;
+    }
+
+    .table-of-contents li {
+      counter-increment: toc;
+      margin-bottom: var(--space-sm);
+    }
+
+    .table-of-contents li::before {
+      content: counter(toc) ".";
+      color: var(--slate-light);
+      font-weight: 600;
+      margin-right: var(--space-sm);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .table-of-contents a {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* ============================================
+       SECTIONS
+       ============================================ */
+    .section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    /* ============================================
+       EXECUTIVE SUMMARY CALLOUT
+       ============================================ */
+    .key-findings-box {
+      background: var(--blue-light);
+      border-left: 4px solid var(--blue);
+      padding: var(--space-lg) var(--space-xl);
+      border-radius: 0 4px 4px 0;
+      margin: var(--space-lg) 0;
+    }
+
+    .key-findings-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .key-findings-list li {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      position: relative;
+    }
+
+    .key-findings-list li::before {
+      content: "\2022";
+      color: var(--blue);
+      font-weight: bold;
+      font-size: 1.2em;
+      position: absolute;
+      left: 0;
+    }
+
+    .metric {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 1.05em;
+    }
+
+    /* ============================================
+       DATA TABLES
+       ============================================ */
+    .data-table-container {
+      margin: var(--space-lg) 0;
+      overflow-x: auto;
+    }
+
+    .data-table-container figcaption {
+      font-size: 0.85rem;
+      color: var(--slate-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .data-table thead th {
+      background: var(--navy);
+      color: var(--white);
+      padding: var(--space-sm) var(--space-md);
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .data-table thead th.number {
+      text-align: right;
+    }
+
+    .data-table tbody td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .data-table tbody tr:nth-child(even) {
+      background: var(--gray-50);
+    }
+
+    .data-table tbody tr:hover {
+      background: var(--blue-light);
+    }
+
+    .data-table td.number {
+      text-align: right;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .data-table td.number strong {
+      color: var(--navy);
+    }
+
+    /* ============================================
+       SIGNIFICANCE CALLOUT
+       ============================================ */
+    .significance-callout {
+      background: var(--gray-50);
+      border-left: 3px solid var(--blue);
+      padding: var(--space-md) var(--space-lg);
+      margin: var(--space-md) 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .sig-badge {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-family: 'Consolas', 'Monaco', monospace;
+      margin-bottom: var(--space-xs);
+    }
+
+    /* ============================================
+       SURVEY QUESTION BLOCKQUOTE
+       ============================================ */
+    blockquote.survey-question {
+      border-left: 3px solid var(--gray-200);
+      padding: var(--space-sm) var(--space-lg);
+      margin: var(--space-md) 0;
+      font-style: italic;
+      color: var(--slate-light);
+    }
+
+    /* ============================================
+       INLINE SVG CHARTS
+       ============================================ */
+    .chart-container {
+      margin: var(--space-lg) 0;
+    }
+
+    .chart-container figcaption {
+      font-size: 0.85rem;
+      color: var(--slate-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .bar-chart {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .bar-chart .bar-label {
+      fill: var(--slate);
+      font-size: 13px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .bar-chart .bar-value {
+      fill: var(--slate);
+      font-size: 12px;
+      font-family: 'Consolas', 'Monaco', monospace;
+    }
+
+    .bar-chart rect {
+      fill: var(--navy-light);
+      rx: 2;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .report-footer {
+      margin-top: var(--space-2xl);
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--gray-200);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--slate-light);
+    }
+
+    /* ============================================
+       PRINT STYLES
+       ============================================ */
+    @media print {
+      body {
+        font-size: 11pt;
+        line-height: 1.4;
+        max-width: none;
+        padding: 0;
+        color: #333;
+      }
+
+      .report-header {
+        background: var(--white) !important;
+        color: var(--navy) !important;
+        border-bottom: 3px solid var(--navy);
+        margin: 0;
+        padding: var(--space-lg) 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .report-title { color: var(--navy) !important; }
+      .report-subtitle, .report-date { color: var(--slate) !important; }
+
+      .table-of-contents { display: none; }
+      nav { display: none; }
+
+      .section { page-break-inside: avoid; }
+      .data-table-container { page-break-inside: avoid; }
+      .chart-container { page-break-inside: avoid; }
+
+      h2 { page-break-after: avoid; }
+      h3 { page-break-after: avoid; }
+
+      .data-table thead th {
+        background: var(--gray-100) !important;
+        color: var(--navy) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .key-findings-box {
+        background: var(--gray-50) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a { color: var(--navy); text-decoration: none; }
+
+      .report-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 9pt;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="report-header">
+    <h1 class="report-title">{Survey Title}</h1>
+    <p class="report-subtitle">Survey Analysis Report</p>
+    <p class="report-date">{Analysis Date}</p>
+  </header>
+
+  <!-- ============================================
+       TABLE OF CONTENTS
+       ============================================ -->
+  <nav class="table-of-contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#executive-summary">Executive Summary</a></li>
+      <li><a href="#methodology">Methodology</a></li>
+      <li><a href="#respondent-profile">Respondent Profile</a></li>
+      <li><a href="#key-findings">Key Findings</a></li>
+      <li><a href="#cross-tab-analysis">Cross-Tabulation Analysis</a></li>
+      <li><a href="#conclusions">Conclusions and Recommendations</a></li>
+      <li><a href="#appendix">Appendix</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main class="report-content">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section id="executive-summary" class="section">
+      <h2>Executive Summary</h2>
+      <div class="key-findings-box">
+        <ul class="key-findings-list">
+          <li><span class="metric">78.3%</span> of respondents reported familiarity with the topic, indicating strong baseline awareness across the sample.</li>
+          <li>Opinion was cautiously negative, with only <span class="metric">31.2%</span> expressing a favorable view — suggesting informed skepticism.</li>
+          <li>Age was the strongest demographic predictor of attitudes (chi-square test, <span class="metric">p = 0.003</span>), with younger respondents significantly more favorable.</li>
+          <li>A notable gap exists between awareness and adoption: while familiarity is high, only <span class="metric">12.4%</span> reported active engagement.</li>
+        </ul>
+      </div>
+      <p><strong>Recommended actions:</strong> Focus engagement efforts on the 25-44 age demographic where both awareness and favorability are highest. Address the awareness-adoption gap through targeted information campaigns.</p>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="methodology" class="section">
+      <h2>Methodology</h2>
+      <figure class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Original sample size</td><td class="number"><strong>500</strong></td></tr>
+            <tr><td>Cleaned sample size</td><td class="number"><strong>467</strong></td></tr>
+            <tr><td>Rows removed</td><td class="number">33 (6.6%)</td></tr>
+            <tr><td>Analysis methods</td><td>Frequency analysis, cross-tabulation, chi-square testing (&alpha; = 0.05)</td></tr>
+            <tr><td>Data collection</td><td>Online survey, Q4 2024</td></tr>
+            <tr><td>Analysis date</td><td>February 2026</td></tr>
+          </tbody>
+        </table>
+      </figure>
+      <p><strong>Note:</strong> A <em>chi-square test</em> measures whether the relationship between two categorical variables (e.g., age group and survey response) is statistically significant — meaning unlikely to have occurred by chance alone.</p>
+    </section>
+
+    <!-- RESPONDENT PROFILE -->
+    <section id="respondent-profile" class="section">
+      <h2>Respondent Profile</h2>
+
+      <h3>Age Distribution</h3>
+      <figure class="data-table-container">
+        <figcaption>Table 1: Age Distribution of Respondents</figcaption>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th class="number">Count</th>
+              <th class="number">Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>18-24</td><td class="number">89</td><td class="number"><strong>19.1%</strong></td></tr>
+            <tr><td>25-34</td><td class="number">142</td><td class="number"><strong>30.4%</strong></td></tr>
+            <tr><td>35-44</td><td class="number">118</td><td class="number"><strong>25.3%</strong></td></tr>
+            <tr><td>45+</td><td class="number">118</td><td class="number"><strong>25.3%</strong></td></tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <!-- Example inline SVG bar chart -->
+      <figure class="chart-container">
+        <figcaption>Figure 1: Age Distribution</figcaption>
+        <svg viewBox="0 0 500 140" class="bar-chart" role="img" aria-label="Horizontal bar chart showing age distribution: 18-24 at 19.1%, 25-34 at 30.4%, 35-44 at 25.3%, 45+ at 25.3%">
+          <g>
+            <text x="55" y="25" text-anchor="end" class="bar-label">18-24</text>
+            <rect x="65" y="13" width="96" height="18" />
+            <text x="167" y="27" class="bar-value">19.1%</text>
+          </g>
+          <g>
+            <text x="55" y="55" text-anchor="end" class="bar-label">25-34</text>
+            <rect x="65" y="43" width="152" height="18" />
+            <text x="223" y="57" class="bar-value">30.4%</text>
+          </g>
+          <g>
+            <text x="55" y="85" text-anchor="end" class="bar-label">35-44</text>
+            <rect x="65" y="73" width="127" height="18" />
+            <text x="198" y="87" class="bar-value">25.3%</text>
+          </g>
+          <g>
+            <text x="55" y="115" text-anchor="end" class="bar-label">45+</text>
+            <rect x="65" y="103" width="127" height="18" />
+            <text x="198" y="117" class="bar-value">25.3%</text>
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <!-- KEY FINDINGS -->
+    <section id="key-findings" class="section">
+      <h2>Key Findings</h2>
+
+      <h3>Theme 1: Awareness and Familiarity</h3>
+      <blockquote class="survey-question">"How familiar are you with [topic]?"</blockquote>
+      <p>The survey revealed strong baseline awareness among respondents, with <strong>78.3%</strong> reporting at least some familiarity. The distribution shows a concentration around moderate familiarity levels, suggesting broad but not deep engagement with the subject matter.</p>
+
+      <div class="significance-callout">
+        <span class="sig-badge">p = 0.003</span>
+        <p>Familiarity varied significantly by age group, with respondents aged 25-34 reporting the highest awareness (<strong>84.1%</strong>) compared to those aged 45+ (<strong>62.3%</strong>).</p>
+      </div>
+
+      <h3>Theme 2: Attitudes and Opinion</h3>
+      <p>Despite high awareness, overall sentiment was cautiously negative. Only <strong>31.2%</strong> expressed a favorable opinion, while <strong>42.8%</strong> were neutral and <strong>26.0%</strong> unfavorable. This pattern of "informed skepticism" — high awareness paired with reserved opinion — was consistent across most demographic groups.</p>
+
+      <figure class="data-table-container">
+        <figcaption>Table 2: Opinion Distribution</figcaption>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Opinion</th>
+              <th class="number">Count</th>
+              <th class="number">Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Very favorable</td><td class="number">52</td><td class="number"><strong>11.1%</strong></td></tr>
+            <tr><td>Somewhat favorable</td><td class="number">94</td><td class="number"><strong>20.1%</strong></td></tr>
+            <tr><td>Neutral</td><td class="number">200</td><td class="number"><strong>42.8%</strong></td></tr>
+            <tr><td>Somewhat unfavorable</td><td class="number">78</td><td class="number"><strong>16.7%</strong></td></tr>
+            <tr><td>Very unfavorable</td><td class="number">43</td><td class="number"><strong>9.2%</strong></td></tr>
+          </tbody>
+        </table>
+      </figure>
+    </section>
+
+    <!-- CROSS-TAB ANALYSIS -->
+    <section id="cross-tab-analysis" class="section">
+      <h2>Cross-Tabulation Analysis</h2>
+      <p>This section presents only statistically significant relationships (p &lt; 0.05). A <em>cross-tabulation</em> examines how responses to one question differ across demographic groups.</p>
+
+      <div class="significance-callout">
+        <span class="sig-badge">p = 0.003</span>
+        <p><strong>Age &times; Familiarity:</strong> Younger respondents (18-34) showed significantly higher familiarity (<strong>82.7%</strong>) compared to older respondents (45+, <strong>62.3%</strong>).</p>
+      </div>
+
+      <div class="significance-callout">
+        <span class="sig-badge">p = 0.018</span>
+        <p><strong>Education &times; Opinion:</strong> Respondents with graduate degrees were significantly more likely to express favorable opinions (<strong>41.2%</strong>) compared to those with high school education (<strong>22.8%</strong>).</p>
+      </div>
+
+      <figure class="data-table-container">
+        <figcaption>Table 3: Summary of Significant Cross-Tabulations</figcaption>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Demographic</th>
+              <th>Question</th>
+              <th class="number">Chi-square</th>
+              <th class="number">p-value</th>
+              <th>Direction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Age</td>
+              <td>Familiarity</td>
+              <td class="number">14.23</td>
+              <td class="number"><strong>0.003</strong></td>
+              <td>Younger = higher familiarity</td>
+            </tr>
+            <tr>
+              <td>Education</td>
+              <td>Opinion</td>
+              <td class="number">8.47</td>
+              <td class="number"><strong>0.018</strong></td>
+              <td>Higher education = more favorable</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </section>
+
+    <!-- CONCLUSIONS -->
+    <section id="conclusions" class="section">
+      <h2>Conclusions and Recommendations</h2>
+
+      <h3>1. Awareness is high but engagement is low</h3>
+      <p>The strong awareness levels (<strong>78.3%</strong>) have not translated into active engagement (<strong>12.4%</strong>). <strong>Recommendation:</strong> Develop targeted engagement programs that convert awareness into action, focusing on the 25-44 age group where favorability is highest.</p>
+
+      <h3>2. Informed skepticism dominates the sentiment landscape</h3>
+      <p>The combination of high awareness and reserved opinion suggests that respondents have formed evidence-based views rather than acting from ignorance. <strong>Recommendation:</strong> Address skepticism with transparent, evidence-based communications rather than awareness campaigns.</p>
+
+      <h3>3. Age and education are the strongest predictors of attitudes</h3>
+      <p>Both age (p = 0.003) and education level (p = 0.018) showed significant associations with key outcomes. <strong>Recommendation:</strong> Segment outreach strategies by age and education level to maximize effectiveness.</p>
+    </section>
+
+    <!-- APPENDIX -->
+    <section id="appendix" class="section">
+      <h2>Appendix</h2>
+
+      <h3>A. Frequency Tables Summary</h3>
+      <figure class="data-table-container">
+        <figcaption>Table 4: Summary of All Frequency Tables</figcaption>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th class="number">Valid N</th>
+              <th>Top Response</th>
+              <th class="number">Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Familiarity</td><td class="number">467</td><td>Somewhat familiar</td><td class="number"><strong>42.3%</strong></td></tr>
+            <tr><td>Opinion</td><td class="number">467</td><td>Neutral</td><td class="number"><strong>42.8%</strong></td></tr>
+            <tr><td>Engagement</td><td class="number">467</td><td>Not engaged</td><td class="number"><strong>54.2%</strong></td></tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h3>B. Data File Locations</h3>
+      <p>Full analysis outputs are available in the following directories:</p>
+      <ul>
+        <li>Frequency tables: <code>workspace/analysis/frequency_tables/</code></li>
+        <li>Banner tables: <code>workspace/analysis/banner_tables/</code></li>
+        <li>Significance tests: <code>workspace/analysis/significance_tests/</code></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="report-footer">
+    <p>Report generated on {Date} | Source data: {filename} | Analyzed with Survey Analysis Orchestrator</p>
+  </footer>
+
+  <!-- ============================================
+       OPTIONAL JAVASCRIPT
+       ============================================ -->
+  <script>
+    // Smooth scrolling for TOC links
+    document.querySelectorAll('.table-of-contents a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
