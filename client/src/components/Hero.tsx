@@ -11,7 +11,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/hero-bg-e4uQ2LrGfEsgXtSyKj6b9Z.webp";
+const HERO_BG = "/hero-bg.webp";
 
 export default function Hero() {
   const scrollToSection = (href: string) => {

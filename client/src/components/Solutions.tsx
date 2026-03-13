@@ -25,10 +25,8 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const THUMB_FOCUS_GROUP =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/thumb-focus-group-gPENuNgG8L4JHsC8ZEa8TB.webp";
-const THUMB_SURVEY =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663291798489/DAEwzpX5KtJjLtj2F8MqRo/thumb-survey-analysis-9yhUCzHq72Yiwr54PpjkVQ.webp";
+const THUMB_FOCUS_GROUP = "/thumb-focus-group.webp";
+const THUMB_SURVEY = "/thumb-survey-analysis.webp";
 const THUMB_BRAND_HEALTH = "/thumb-brand-health.jpg";
 
 export default function Solutions() {
