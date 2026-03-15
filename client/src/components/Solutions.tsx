@@ -1,9 +1,10 @@
 /**
  * Solutions Page
- * Three solution sections using the reusable SolutionSection component
+ * Four solution sections using the reusable SolutionSection component
  * 1. Focus Group / Transcript Analysis — with one-pager modal
  * 2. Survey Analysis & Reporting — with one-pager modal
  * 3. Brand Health Tracking — with one-pager modal
+ * 4. Video Creation Pipeline — with one-pager modal
  *
  * DESIGN: The Studio — Warm White & Copper
  */
@@ -13,6 +14,7 @@ import SolutionSection from "./SolutionSection";
 import FocusGroupOnePager from "./FocusGroupOnePager";
 import SurveyAnalysisOnePager from "./SurveyAnalysisOnePager";
 import BrandHealthOnePager from "./BrandHealthOnePager";
+import VideoCreationOnePager from "./VideoCreationOnePager";
 import {
   FileText,
   Shield,
@@ -23,16 +25,22 @@ import {
   TrendingUp,
   Layers,
   RefreshCw,
+  Film,
+  ShieldCheck,
+  Eye,
+  Play,
 } from "lucide-react";
 
 const THUMB_FOCUS_GROUP = "/thumb-focus-group.webp";
 const THUMB_SURVEY = "/thumb-survey-analysis.webp";
 const THUMB_BRAND_HEALTH = "/thumb-brand-health.jpg";
+const THUMB_VIDEO_CREATION = "/thumb-video-creator.png";
 
 export default function Solutions() {
   const [focusGroupOpen, setFocusGroupOpen] = useState(false);
   const [surveyOpen, setSurveyOpen] = useState(false);
   const [brandHealthOpen, setBrandHealthOpen] = useState(false);
+  const [videoCreationOpen, setVideoCreationOpen] = useState(false);
 
   return (
     <>
@@ -136,6 +144,39 @@ export default function Solutions() {
         ]}
       />
 
+      {/* Solution 4: Video Creation Pipeline */}
+      <SolutionSection
+        eyebrow="Solution 4"
+        title="Video Creation Pipeline"
+        description="Drop in a research report and get back a polished, two-minute animated video summarizing the key findings — the kind of deliverable that actually gets watched. Eleven AI agents handle narrative, motion design, and video development across three stages, producing a finished video in about 90 minutes."
+        className="bg-muted/30"
+        onePagerThumbnail={THUMB_VIDEO_CREATION}
+        onePagerLabel="Video Creation Pipeline"
+        onOnePagerClick={() => setVideoCreationOpen(true)}
+        capabilities={[
+          {
+            icon: Film,
+            title: "Report to Video in a Single Pipeline",
+            text: "Drop in a research report — PDF, Word, Markdown, HTML — and the system handles everything from narrative extraction through final video code. No creative brief, no designer, no motion graphics artist.",
+          },
+          {
+            icon: ShieldCheck,
+            title: "Research-Integrity Review",
+            text: "A dedicated reviewer ensures findings are accurately represented at every stage. Data is not mischaracterized, statistics are not taken out of context, and the narrative faithfully reflects the original report.",
+          },
+          {
+            icon: Eye,
+            title: "Cold-Read Comprehension Test",
+            text: "An executive-perspective reviewer evaluates the narrative without reading the source report — the most authentic test of whether the video will make sense to a viewer with no prior context.",
+          },
+          {
+            icon: Play,
+            title: "Production-Ready Output",
+            text: "The final Remotion project compiles to a standard React application. Preview in Remotion Studio, render to MP4, and deliver — no post-production software required.",
+          },
+        ]}
+      />
+
       {/* One-Pager Modals */}
       <FocusGroupOnePager
         open={focusGroupOpen}
@@ -148,6 +189,10 @@ export default function Solutions() {
       <BrandHealthOnePager
         open={brandHealthOpen}
         onOpenChange={setBrandHealthOpen}
+      />
+      <VideoCreationOnePager
+        open={videoCreationOpen}
+        onOpenChange={setVideoCreationOpen}
       />
     </>
   );
