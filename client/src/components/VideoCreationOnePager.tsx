@@ -40,7 +40,7 @@ export default function VideoCreationOnePager({
       {/* Embedded Video Hero */}
       <div className="my-8">
         <video
-          className="w-full rounded-lg shadow-lg"
+          className="w-full rounded-lg shadow-lg border border-black"
           controls
           preload="metadata"
         >
