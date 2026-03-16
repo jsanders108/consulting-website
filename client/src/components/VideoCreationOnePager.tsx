@@ -30,7 +30,11 @@ export default function VideoCreationOnePager({
       onOpenChange={onOpenChange}
       headline="From Research Report to Animated Video — In 90 Minutes"
       badge="Capability Demo — Synthetic Data"
-      intro="Market research findings can reach a wider audience when they're packaged as something people can easily watch. I built a system that reads a research report and produces a polished, two-minute animated video summarizing the key findings — the kind of deliverable that actually gets watched in an executive's inbox. Three agent teams handle the work across three stages: narrative and visual design, motion design, and video development. The video below was produced from a focus group analysis report in about 90 minutes, with roughly 20 minutes of human review."
+      intro="Market research findings can reach a wider audience when they're packaged as something people can easily watch. 
+      I built a system that reads a research report and produces a polished, two-minute animated video summarizing the key 
+      findings — the kind of deliverable that actually gets watched in an executive's inbox. Three agent teams handle the work 
+      across three stages: narrative and visual design, motion design, and video development. The video below was produced 
+      from a focus group analysis report (using synthetic data) in about 60 minutes, with roughly 15 minutes of human review."
       ctaText="If you'd like to see how this could work with your research deliverables, I'd be happy to walk you through the system."
     >
       {/* Embedded Video Hero */}
@@ -45,7 +49,7 @@ export default function VideoCreationOnePager({
         </video>
         <p className="text-muted-foreground text-sm mt-3 text-center">
           White Strawberry Campaign Research — a 13-scene animated summary
-          produced from a focus group analysis report
+          produced from a focus group analysis report (using synthetic data)
         </p>
       </div>
 
